@@ -176,7 +176,7 @@ figcaption { margin-top: 8px; color: var(--gris); }
 .foto:hover img { transform: scale(1.03); }
 
 /* Aparecer al hacer scroll */
-.aparecer { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+.aparecer { transform: translateY(24px); transition: transform .9s ease; }
 .aparecer.visible { opacity: 1; transform: none; }
 
 /* ---------- 01 El estudio ---------- */
