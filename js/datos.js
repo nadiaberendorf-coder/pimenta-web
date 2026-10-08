@@ -33,13 +33,13 @@ window.PIMENTA = {
   // "lista" = precio de lista (aparece tachado si es mayor al precio web).
   // Escribí los números SIN puntos ni signos.
   tarifas: [
-    { horas: 1,  lista: 89000,  web: 79000 },
-    { horas: 2,  lista: 159000, web: 159000 },
-    { horas: 3,  lista: 219000, web: 219000 },
-    { horas: 4,  lista: 289000, web: 279000 },
-    { horas: 5,  lista: 349000, web: 339000 },
-    { horas: 6,  lista: 389000, web: 389000 },
-    { horas: 8,  lista: 489000, web: 459000 },
+    { horas: 1,  lista: 99000,  web: 79000 },
+    { horas: 2,  lista: 169000, web: 159000 },
+    { horas: 3,  lista: 229000, web: 219000 },
+    { horas: 4,  lista: 299000, web: 279000 },
+    { horas: 5,  lista: 359000, web: 339000 },
+    { horas: 6,  lista: 399000, web: 389000 },
+    { horas: 8,  lista: 499000, web: 459000 },
     { horas: 10, lista: 549000, web: 499000 },
     { horas: 12, lista: 579000, web: 539000 }
   ],
