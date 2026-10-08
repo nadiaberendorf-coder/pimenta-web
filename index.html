@@ -4,20 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PIMENTA Estudios | Alquiler de estudio fotográfico en Congreso, CABA</title>
-  <meta name="description" content="Alquiler de estudio fotográfico por hora en Congreso, CABA (Av. Callao 194). Para producciones de foto y video, content creators, marcas y eventos. Reservá online.">
+  <meta name="description" content="Alquiler de estudio fotográfico con luz natural en Congreso, CABA (Av. Callao 194). 85 m², 4,5 m de altura, equipos y mobiliario incluidos. Por hora, para fotógrafos, content creators y marcas.">
   <link rel="canonical" href="https://nadiaberendorf-coder.github.io/pimenta-web/">
-  <meta name="theme-color" content="#161412">
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/favicon.png">
 
   <!-- Vista previa al compartir el link (WhatsApp, Instagram, Facebook) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="PIMENTA Estudios">
-  <meta property="og:title" content="PIMENTA Estudios · Estudio fotográfico en Congreso, CABA">
-  <meta property="og:description" content="Alquiler por hora para foto, video, content creators, marcas y eventos. Av. Callao 194, CABA.">
+  <meta property="og:title" content="PIMENTA Estudios · Estudio fotográfico con luz natural en Congreso">
+  <meta property="og:description" content="85 m² con luz natural, 4,5 m de altura, equipos y mobiliario incluidos. Alquiler por hora en Av. Callao 194, CABA.">
   <meta property="og:url" content="https://nadiaberendorf-coder.github.io/pimenta-web/">
-  <meta property="og:image" content="https://nadiaberendorf-coder.github.io/pimenta-web/fotos/portada.jpg">
-  <meta property="og:image:alt" content="Estudio fotográfico PIMENTA Estudios en Congreso, Buenos Aires">
+  <meta property="og:image" content="https://nadiaberendorf-coder.github.io/pimenta-web/fotos/compartir.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Espacio de PIMENTA Estudios con piso de madera, ventanales y luz natural">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Datos del negocio para Google -->
@@ -26,10 +29,13 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "PIMENTA Estudios",
-    "description": "Alquiler de estudio fotográfico por hora para producciones de foto y video, content creators, marcas y eventos.",
+    "description": "Alquiler de estudio fotográfico por hora con luz natural, equipos y mobiliario incluidos. Para producciones de foto y video, content creators, marcas y eventos.",
     "url": "https://nadiaberendorf-coder.github.io/pimenta-web/",
-    "image": "https://nadiaberendorf-coder.github.io/pimenta-web/fotos/portada.jpg",
+    "image": "https://nadiaberendorf-coder.github.io/pimenta-web/fotos/compartir.jpg",
+    "logo": "https://nadiaberendorf-coder.github.io/pimenta-web/img/logo-rojo.png",
     "hasMap": "https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6",
+    "sameAs": ["https://www.instagram.com/pimentaestudios/"],
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Callao 194 U5",
@@ -41,6 +47,9 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="fotos/portada.jpg">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -49,176 +58,344 @@
 <a class="saltar" href="#contenido">Ir al contenido</a>
 
 <!-- ===================== MENÚ ===================== -->
-<header class="barra">
-  <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">PIMENTA<span>Estudios</span></a>
-  <button id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
-    <span></span><span></span>
-  </button>
+<header class="barra" id="barra">
+  <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">
+    <img src="img/logo-rojo.png" alt="PIMENTA" width="150" height="155">
+  </a>
   <nav id="menu" class="menu" aria-label="Secciones">
-    <a href="#estudio">El estudio</a>
-    <a href="#tarifas">Tarifas</a>
-    <a href="#galeria">Galería</a>
-    <a href="#faq">Preguntas</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#reservar" class="menu-cta">Reservar</a>
+    <a href="#estudio"><span>01</span> El estudio</a>
+    <a href="#incluido"><span>02</span> Todo incluido</a>
+    <a href="#tarifas"><span>03</span> Tarifas</a>
+    <a href="#galeria"><span>04</span> Producciones</a>
+    <a href="#reservar"><span>05</span> Cómo reservar</a>
+    <a href="#faq"><span>06</span> Preguntas</a>
+    <a href="#ubicacion"><span>07</span> Ubicación</a>
+    <a href="#contacto"><span>08</span> Contacto</a>
   </nav>
+  <div class="barra-acciones">
+    <a href="#reservar" class="btn btn-chico">Reservar</a>
+    <button id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <main id="contenido">
 
-<!-- ===================== 1. PORTADA ===================== -->
+<!-- ===================== PORTADA ===================== -->
 <section id="inicio" class="portada">
-  <div class="portada-foto">
-    <img data-foto src="fotos/portada.jpg" alt="Set del estudio PIMENTA listo para una producción de fotos" fetchpriority="high">
+  <div class="meta-fila">
+    <span>Estudio de foto &amp; video</span>
+    <span>Av. Callao 194 — Congreso</span>
+    <span>Buenos Aires, AR</span>
   </div>
-  <div class="portada-texto">
-    <p class="etiqueta">Congreso · CABA</p>
-    <h1>Estudio fotográfico en alquiler, por hora.</h1>
-    <p class="bajada">Para producciones de foto y video, content creators, marcas y eventos. En Av. Callao 194, a pasos del Congreso.</p>
-    <div class="botones">
-      <a href="#reservar" class="btn btn-principal">Reservar</a>
-      <a href="#contacto" data-link="whatsapp" class="btn btn-secundario">Consultar por WhatsApp</a>
+  <h1 class="mega">Estudio de <em>luz natural</em> en alquiler.</h1>
+  <div class="portada-grid">
+    <figure class="portada-foto">
+      <img src="fotos/portada.jpg" alt="Espacio de PIMENTA Estudios con ventanales altos, piso de madera y sol entrando por la mañana" fetchpriority="high">
+      <figcaption>(01) Espacio I — Ventanales sobre Callao</figcaption>
+    </figure>
+    <div class="portada-lado">
+      <p class="bajada">Alquiler por hora para fotógrafos, content creators y marcas. Equipos, mobiliario y asistencia incluidos: llegás y producís.</p>
+      <div class="botones">
+        <a href="#reservar" class="btn">Reservar <span aria-hidden="true">→</span></a>
+        <a href="#tarifas" class="btn btn-linea">Ver tarifas</a>
+      </div>
+      <figure class="portada-mini">
+        <img src="fotos/espacio-escritorio.jpg" alt="Rincón con escritorio blanco, silla naranja y cuadro estilo Rothko junto a la ventana" loading="lazy">
+        <figcaption>(02) Escritorio y luz de tarde</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ===================== 2. EL ESTUDIO ===================== -->
+<!-- Ficha técnica -->
+<ul class="ficha" aria-label="Datos del estudio">
+  <li><strong>85 m²</strong><span>para producir</span></li>
+  <li><strong>4,5 m</strong><span>de altura</span></li>
+  <li><strong>10 m</strong><span>de tiro máximo</span></li>
+  <li><strong>2</strong><span>espacios + infinito</span></li>
+</ul>
+
+<div class="cinta" aria-hidden="true">
+  <div class="cinta-pista">
+    <span>Fotografía</span><span>Video</span><span>Campañas</span><span>E-commerce</span><span>Contenido</span><span>Eventos</span>
+    <span>Fotografía</span><span>Video</span><span>Campañas</span><span>E-commerce</span><span>Contenido</span><span>Eventos</span>
+  </div>
+</div>
+
+<!-- ===================== 01 EL ESTUDIO ===================== -->
 <section id="estudio" class="seccion">
   <div class="contenedor">
-    <p class="etiqueta">El estudio</p>
-    <h2>Un espacio pensado para que tus fotos luzcan.</h2>
-    <p class="intro">Llegás, armás y producís. Te contamos qué vas a encontrar.</p>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(01)</span> El estudio</p>
+      <h2>Arquitectura porteña, <em>pensada para producir</em>.</h2>
+      <p class="intro">Techos de 4,5 metros, molduras, pisos de pinotea y ventanales con vista a Callao. Dos espacios de tiro, recepción, cocina y balcones. El estudio se alquila completo: es todo tuyo.</p>
+    </header>
 
-    <div class="estudio-grid">
-      <figure class="foto foto-alta">
-        <img data-foto src="fotos/estudio-1.jpg" alt="Vista general del espacio de PIMENTA Estudios" loading="lazy">
+    <div class="espacios">
+      <article class="espacio aparecer">
+        <figure class="foto"><img src="fotos/espacio-ventanal.jpg" alt="Espacio I: ventanal en arco con mesa Tulip blanca y sillas" loading="lazy"></figure>
+        <div class="espacio-texto">
+          <p class="num">Espacio I</p>
+          <h3>El de los ventanales</h3>
+          <ul class="medidas"><li>50 m²</li><li>10 m de tiro</li><li>4,5 m de alto</li></ul>
+        </div>
+      </article>
+      <article class="espacio aparecer">
+        <figure class="foto"><img src="fotos/espacio-2.jpg" alt="Espacio II: sillón modular beige, alfombra de pelo largo y sillas Wassily" loading="lazy"></figure>
+        <div class="espacio-texto">
+          <p class="num">Espacio II</p>
+          <h3>El del infinito</h3>
+          <ul class="medidas"><li>35 m²</li><li>8 m de tiro</li><li>4,5 m de alto</li></ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="plano-bloque aparecer">
+      <figure class="plano">
+        <img src="img/plano.png" alt="Plano de PIMENTA Estudios: Espacio I de 50 m², Espacio II de 35 m² con infinito, recepción, catering, cocina, toilette, privado y dos balcones" loading="lazy" width="683" height="809">
       </figure>
-      <div class="estudio-datos">
-        <div class="dato">
-          <h3>Espacio</h3>
-          <p><span class="completar">[completar: m² del estudio, altura, luz natural]</span></p>
-        </div>
-        <div class="dato">
-          <h3>Equipamiento</h3>
-          <p><span class="completar">[completar: luces, modificadores, trípodes y lo que incluye el alquiler]</span></p>
-        </div>
-        <div class="dato">
-          <h3>Fondos</h3>
-          <p><span class="completar">[completar: fondos disponibles y colores]</span></p>
-        </div>
+      <div>
+        <h3>Además del set</h3>
+        <ul class="lista-fina">
+          <li>Hall de recepción con espacio para catering</li>
+          <li>Cocina completamente equipada</li>
+          <li>Toilet de uso general</li>
+          <li>Dos balcones aterrazados</li>
+          <li>Probador con espejo</li>
+          <li>Espacio de makeup con luz natural</li>
+          <li>4 percheros de hierro blanco y negro</li>
+        </ul>
+        <a href="#estudio" data-link="tour360" class="link-flecha">Recorrer el tour virtual 360° <span class="completar" data-si-falta="tour360">[completar link]</span></a>
       </div>
-      <figure class="foto">
-        <img data-foto src="fotos/estudio-2.jpg" alt="Detalle de equipamiento y fondos de PIMENTA Estudios" loading="lazy">
-      </figure>
     </div>
 
-    <ul class="para-quien">
-      <li>Fotógrafos</li>
-      <li>Content creators</li>
-      <li>Marcas</li>
-      <li>Producciones de video</li>
-      <li>Eventos</li>
-    </ul>
+    <div class="luz aparecer">
+      <figure class="foto"><img src="fotos/espacio-1.jpg" alt="Sol de la mañana entrando por los ventanales de PIMENTA sobre el piso de madera" loading="lazy"></figure>
+      <div class="luz-texto">
+        <p class="num">La luz</p>
+        <h3>¿A qué hora venir?</h3>
+        <dl class="horarios-luz">
+          <div><dt>Mañana</dt><dd>Sol directo y el mayor ingreso de luz.</dd></div>
+          <div><dt>Mediodía</dt><dd>Todavía entra un poco de sol.</dd></div>
+          <div><dt>Desde las 13 h</dt><dd>Mucha luz natural pareja hasta que se esconde el sol.</dd></div>
+        </dl>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===================== 3. SERVICIOS Y TARIFAS ===================== -->
-<section id="tarifas" class="seccion seccion-clara">
+<!-- ===================== 02 TODO INCLUIDO ===================== -->
+<section id="incluido" class="seccion seccion-hueso">
   <div class="contenedor">
-    <p class="etiqueta">Servicios y tarifas</p>
-    <h2>Elegí cuánto tiempo necesitás.</h2>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(02)</span> Todo incluido</p>
+      <h2>Un estudio <em>all inclusive</em>.</h2>
+      <p class="intro">Resolvé e-commerce, campaña y contenido para redes en una sola producción. Todo esto ya está incluido en la tarifa.</p>
+    </header>
 
-    <div class="tarifas">
-      <article class="tarifa">
-        <h3>Por hora</h3>
-        <p class="precio"><span class="completar">[completar precio]</span></p>
-        <p>Ideal para sesiones cortas y contenido.</p>
-      </article>
-      <article class="tarifa tarifa-destacada">
-        <h3>Media jornada</h3>
-        <p class="precio"><span class="completar">[completar precio]</span></p>
-        <p><span class="completar">[completar: cantidad de horas]</span></p>
-      </article>
-      <article class="tarifa">
-        <h3>Jornada completa</h3>
-        <p class="precio"><span class="completar">[completar precio]</span></p>
-        <p><span class="completar">[completar: cantidad de horas]</span></p>
-      </article>
-      <article class="tarifa">
-        <h3>Eventos</h3>
-        <p class="precio"><span class="completar">[completar precio]</span></p>
-        <p>Presentaciones, lanzamientos y encuentros. Consultanos por tu fecha.</p>
-      </article>
+    <div class="pestanas aparecer" role="tablist" aria-label="Qué incluye">
+      <button role="tab" aria-selected="true" aria-controls="tab-equipos" id="b-equipos">Equipos</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-servicios" id="b-servicios" tabindex="-1">Servicios</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-muebles" id="b-muebles" tabindex="-1">Mobiliario</button>
     </div>
 
-    <div class="adicionales">
-      <h3>Adicionales</h3>
-      <p><span class="completar">[completar: adicionales y sus precios]</span></p>
+    <div class="panel" role="tabpanel" id="tab-equipos" aria-labelledby="b-equipos">
+      <ul class="lista-columnas">
+        <li>Infinito ciclorama 2,72 m × 3 m de altura, blanco y colores</li>
+        <li>2 flashes Visico 600W con luz de modelado 25W</li>
+        <li>Flash Visico 300W de apoyo</li>
+        <li>Luz continua RGB 500W, montura Bowens</li>
+        <li>Octobox 150 cm y Octobox 90 cm, encastre Bowens</li>
+        <li>Softbox 60 × 90 cm, encastre Bowens</li>
+        <li>Difusor Triopo TRKQ-65 tipo linterna</li>
+        <li>Emisor/receptor para flash</li>
+        <li>Luz continua blanca 250W para trípode</li>
+        <li>Reflectores LED: 2 blancos 100W y 2 RGB 50W</li>
+        <li>2 telgopores 1×2 para rebote y bandera</li>
+        <li>Pantalla reflectora 5 en 1</li>
+        <li>Monitor HP Elite Display 23" + TV Samsung 40" (HDMI)</li>
+        <li>Cable Tether Tools USB-C de 3 m</li>
+        <li>Trípode de cámara Geekoto y 4 trípodes de iluminación</li>
+        <li>Alargues y zapatillas</li>
+      </ul>
     </div>
-
-    <p class="nota">Reservás con una seña y el saldo lo pagás el día de la producción. Seña: <span class="completar">[completar % o monto]</span>.</p>
+    <div class="panel" role="tabpanel" id="tab-servicios" aria-labelledby="b-servicios" hidden>
+      <ul class="lista-columnas">
+        <li>Asistente de locación dedicado</li>
+        <li>Wifi de 300 Mbps</li>
+        <li>Parlantes Google Home en toda la locación</li>
+        <li>Café, té y mate durante toda la jornada</li>
+        <li>Cafetera de filtro a disposición</li>
+        <li>Cocina equipada: horno, air fryer y heladera</li>
+        <li>Dispenser frío-calor</li>
+        <li>Vajilla completa para producción y equipo</li>
+        <li>Aire acondicionado y estufas en todos los ambientes</li>
+        <li>Plancha y tabla de planchar</li>
+        <li>Botiquín de primeros auxilios</li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="tab-muebles" aria-labelledby="b-muebles" hidden>
+      <ul class="lista-columnas">
+        <li>Sillas Wassily Breuer, Bauhaus (×2)</li>
+        <li>Sillón modular beige con respaldos móviles (×4)</li>
+        <li>Mesa Tulip blanca de 160 cm</li>
+        <li>Silla Estudio T en terciopelo naranja (×2)</li>
+        <li>Sillas Master Eames</li>
+        <li>Cama matrimonial con ropa blanca o gris</li>
+        <li>Escritorio beige de madera</li>
+        <li>Alfombras beige de pelo largo</li>
+        <li>Cuadro estilo Rothko enmarcado</li>
+        <li>Estantería blanca y dorada de 2 m de altura</li>
+        <li>Mesas auxiliares para oficina y producción</li>
+        <li>Plantas reales y flores</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- ===================== 4. GALERÍA ===================== -->
-<section id="galeria" class="seccion">
+<!-- ===================== 03 TARIFAS ===================== -->
+<section id="tarifas" class="seccion">
   <div class="contenedor">
-    <p class="etiqueta">Galería</p>
-    <h2>Lo que se hace en PIMENTA.</h2>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(03)</span> Tarifas</p>
+      <h2>A más horas, <em>menor precio</em>.</h2>
+      <p class="intro">Estudio completo con equipos, mobiliario, servicios y asistencia de locación. Reservando online tenés el <strong>precio web</strong>.</p>
+    </header>
+
+    <div class="tarifas-caja aparecer">
+      <div class="tarifas-top">
+        <div class="selector" role="radiogroup" aria-label="Tipo de día">
+          <button role="radio" aria-checked="true" data-dia="habil">Día hábil</button>
+          <button role="radio" aria-checked="false" data-dia="noHabil">Fin de semana y feriados</button>
+        </div>
+        <p class="cuenta" id="cuenta" hidden></p>
+      </div>
+
+      <table class="tabla-precios">
+        <caption class="oculto">Tarifas de alquiler de PIMENTA Estudios según cantidad de horas</caption>
+        <thead>
+          <tr><th scope="col">Horas</th><th scope="col">Precio web</th><th scope="col" class="col-hora">Por hora</th></tr>
+        </thead>
+        <tbody id="tabla-precios"></tbody>
+      </table>
+
+      <ul class="condiciones">
+        <li>Tarifas hasta 10 personas, solo para producciones.</li>
+        <li>No incluye servicio de fotografía.</li>
+        <li>Reservás con una seña de <span class="completar" data-texto="sena">[completar % o monto]</span> y el saldo se paga el día de la producción.</li>
+      </ul>
+    </div>
+
+    <div class="extra-grid">
+      <div class="extra aparecer">
+        <h3>Adicionales</h3>
+        <ul class="lista-fina">
+          <li><span>Armado de cama con ropa blanca</span><span>$25.000</span></li>
+          <li><span>Vajilla variada para producción</span><span>Consultar</span></li>
+          <li><span class="completar">[completar otros adicionales]</span></li>
+        </ul>
+      </div>
+      <div class="extra extra-bordo aparecer">
+        <h3>¿Evento o más de 10 personas?</h3>
+        <p>Lanzamientos, showrooms, cenas, talleres. Armamos un presupuesto a medida.</p>
+        <a href="#contacto" data-link="whatsapp" class="btn btn-claro">Pedir presupuesto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 PRODUCCIONES ===================== -->
+<section id="galeria" class="seccion seccion-hueso">
+  <div class="contenedor">
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(04)</span> Producciones</p>
+      <h2>Hecho en <em>PIMENTA</em>.</h2>
+      <p class="intro">Retratos, moda, campañas y contenido de marcas producidos en el estudio.</p>
+    </header>
     <div class="galeria">
-      <button type="button" aria-label="Ver foto 1 en grande"><img data-foto src="fotos/galeria-1.jpg" alt="Producción de fotos en el estudio PIMENTA" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 2 en grande"><img data-foto src="fotos/galeria-2.jpg" alt="Sesión de retrato con iluminación de estudio en PIMENTA" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 3 en grande"><img data-foto src="fotos/galeria-3.jpg" alt="Set armado con fondo de estudio en PIMENTA" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 4 en grande"><img data-foto src="fotos/galeria-4.jpg" alt="Creación de contenido para redes en el estudio PIMENTA" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 5 en grande"><img data-foto src="fotos/galeria-5.jpg" alt="Producción de producto para una marca en PIMENTA" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 6 en grande"><img data-foto src="fotos/galeria-6.jpg" alt="Grabación de video en el estudio PIMENTA" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 7 en grande"><img data-foto src="fotos/galeria-7.jpg" alt="Detalle de luces y equipamiento de PIMENTA Estudios" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 8 en grande"><img data-foto src="fotos/galeria-8.jpg" alt="Evento en el espacio de PIMENTA Estudios" loading="lazy"></button>
-      <button type="button" aria-label="Ver foto 9 en grande"><img data-foto src="fotos/galeria-9.jpg" alt="Resultado de una sesión de fotos hecha en PIMENTA" loading="lazy"></button>
+      <button type="button" class="g-alta"><img src="fotos/produccion-1.jpg" alt="Retrato de mujer con traje negro frente a una puerta de madera antigua" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-2.jpg" alt="Modelo con vestido negro frente al infinito blanco con flash y paraguas" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-3.jpg" alt="Modelo apoyada en el balcón con edificios de Avenida Callao de fondo" loading="lazy"></button>
+      <button type="button" class="g-alta"><img src="fotos/produccion-4.jpg" alt="Modelo con vestido rosa de tul junto a la ventana" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-5.jpg" alt="Modelo con sweater amarillo frente al ventanal con cúpula de fondo" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-6.jpg" alt="Modelo con campera negra en el balcón de hierro" loading="lazy"></button>
+      <button type="button" class="g-alta"><img src="fotos/produccion-7.jpg" alt="Retrato editorial de dos mujeres con luz natural dura" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-8.jpg" alt="Hombre con saco negro apoyado en una puerta de madera" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-9.jpg" alt="Modelo con look total black frente a los ventanales" loading="lazy"></button>
+      <button type="button" class="g-alta"><img src="fotos/produccion-10.jpg" alt="Retrato de mujer con top negro sobre fondo de madera cálida" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-11.jpg" alt="Modelo con jean y musculosa blanca apoyada en la pared junto a la ventana" loading="lazy"></button>
+      <button type="button"><img src="fotos/produccion-12.jpg" alt="Foto en blanco y negro de mujer embarazada con tela blanca en el balcón" loading="lazy"></button>
     </div>
+    <a href="#contacto" data-link="instagram" class="link-flecha centrado">Ver más en Instagram <span data-texto="instagram">@pimentaestudios</span></a>
   </div>
 </section>
 
-<!-- ===================== 5. CÓMO RESERVAR ===================== -->
-<section id="reservar" class="seccion seccion-oscura">
+<!-- ===================== 05 CÓMO RESERVAR ===================== -->
+<section id="reservar" class="seccion seccion-bordo">
   <div class="contenedor">
-    <p class="etiqueta">Cómo reservar</p>
-    <h2>Reservar es fácil: 3 pasos.</h2>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(05)</span> Cómo reservar</p>
+      <h2>Tu fecha, <em>en tres pasos</em>.</h2>
+    </header>
     <ol class="pasos">
-      <li>
-        <span class="paso-num">1</span>
-        <h3>Elegí día y horario</h3>
-        <p>Mirá la disponibilidad en el calendario de abajo y elegí tu turno.</p>
+      <li class="aparecer">
+        <span class="paso-num">01</span>
+        <h3>Elegí día y horas</h3>
+        <p>Mirá la disponibilidad en vivo en el calendario y elegí tu turno.</p>
       </li>
-      <li>
-        <span class="paso-num">2</span>
+      <li class="aparecer">
+        <span class="paso-num">02</span>
         <h3>Confirmá con la seña</h3>
-        <p>Tu reserva queda firme al abonar la seña (<span class="completar">[completar % o monto]</span>).</p>
+        <p>Abonás la seña (<span class="completar" data-texto="sena">[completar % o monto]</span>) y la fecha queda bloqueada para vos.</p>
       </li>
-      <li>
-        <span class="paso-num">3</span>
+      <li class="aparecer">
+        <span class="paso-num">03</span>
         <h3>Vení a producir</h3>
-        <p>El día de la producción pagás el saldo y el estudio es tuyo.</p>
+        <p>El día de la producción pagás el saldo y te recibe la asistente de locación.</p>
       </li>
     </ol>
 
     <div id="calendly" class="calendly">
       <p><span class="completar">[completar link de Calendly]</span></p>
       <p>Mientras tanto, escribinos y te pasamos la disponibilidad.</p>
-      <a href="#contacto" data-link="whatsapp" class="btn btn-principal">Consultar disponibilidad</a>
+      <a href="#contacto" data-link="whatsapp" class="btn">Consultar disponibilidad</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== 6. PREGUNTAS FRECUENTES ===================== -->
+<!-- ===================== 06 PREGUNTAS ===================== -->
 <section id="faq" class="seccion">
   <div class="contenedor contenedor-angosto">
-    <p class="etiqueta">Preguntas frecuentes</p>
-    <h2>Lo que más nos preguntan.</h2>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(06)</span> Preguntas frecuentes</p>
+      <h2>Lo que más <em>nos preguntan</em>.</h2>
+    </header>
     <div class="faq">
       <details>
-        <summary>¿Cómo se paga la reserva?</summary>
-        <p>Reservás con una seña (<span class="completar">[completar % o monto]</span>) y el saldo lo pagás el día de la producción.</p>
+        <summary>¿Qué incluye el alquiler?</summary>
+        <p>El estudio completo con equipos, mobiliario, servicios y asistencia de locación. Fijate el detalle en <a href="#incluido">Todo incluido</a>.</p>
+      </details>
+      <details>
+        <summary>¿Incluye fotógrafo?</summary>
+        <p>No. La tarifa es por el alquiler del estudio y no incluye servicio de fotografía.</p>
+      </details>
+      <details>
+        <summary>¿Cuántas personas pueden venir?</summary>
+        <p>Las tarifas son para producciones de hasta 10 personas. Para eventos o grupos más grandes, escribinos y te pasamos un presupuesto.</p>
+      </details>
+      <details>
+        <summary>¿Se puede alquilar un solo espacio?</summary>
+        <p>No, el estudio se alquila completo: los dos espacios, la recepción, la cocina y los balcones son para tu producción.</p>
+      </details>
+      <details>
+        <summary>¿A qué hora hay mejor luz?</summary>
+        <p>De mañana hay sol directo y el mayor ingreso de luz. Al mediodía todavía entra un poco de sol, y desde las 13 h hay mucha luz natural pareja hasta que se esconde el sol.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se paga?</summary>
+        <p>Reservás con una seña de <span class="completar" data-texto="sena">[completar % o monto]</span> y el saldo lo pagás el día de la producción.</p>
       </details>
       <details>
         <summary>¿Qué pasa si tengo que cancelar o cambiar la fecha?</summary>
@@ -228,78 +405,63 @@
         <summary>¿Qué horarios tiene el estudio?</summary>
         <p><span class="completar">[completar: días y horarios]</span></p>
       </details>
-      <details>
-        <summary>¿Cuántas personas entran?</summary>
-        <p><span class="completar">[completar: capacidad máxima]</span></p>
-      </details>
-      <details>
-        <summary>¿Qué incluye el alquiler?</summary>
-        <p><span class="completar">[completar: qué incluye]</span></p>
-      </details>
     </div>
   </div>
 </section>
 
-<!-- ===================== 7. UBICACIÓN ===================== -->
-<section id="ubicacion" class="seccion seccion-clara">
+<!-- ===================== 07 UBICACIÓN ===================== -->
+<section id="ubicacion" class="seccion seccion-hueso">
   <div class="contenedor">
-    <p class="etiqueta">Ubicación</p>
-    <h2>Estamos en Congreso, CABA.</h2>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(07)</span> Ubicación</p>
+      <h2>Av. Callao 194, <em>Congreso</em>.</h2>
+    </header>
     <div class="ubicacion">
       <div class="mapa">
-        <iframe src="https://www.google.com/maps?q=Av.+Callao+194,+C1022+CABA,+Argentina&output=embed" title="Mapa de PIMENTA Estudios en Av. Callao 194, CABA" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps?q=Av.+Callao+194,+CABA,+Argentina&output=embed" title="Mapa de PIMENTA Estudios en Av. Callao 194, CABA" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="llegar">
         <h3>Av. Callao 194 U5</h3>
         <p>Congreso, Ciudad Autónoma de Buenos Aires.</p>
         <h3>Cómo llegar</h3>
         <p><span class="completar">[completar: subte, colectivos, estacionamiento y cómo ingresar al edificio]</span></p>
-        <a class="btn btn-borde" href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        <a class="btn btn-linea" href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Abrir en Google Maps</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 8. CONTACTO ===================== -->
-<section id="contacto" class="seccion seccion-oscura">
+<!-- ===================== 08 CONTACTO ===================== -->
+<section id="contacto" class="seccion seccion-tinta">
   <div class="contenedor">
-    <p class="etiqueta">Contacto</p>
-    <h2>¿Tenés una producción en mente? Hablemos.</h2>
+    <header class="titulo-seccion aparecer">
+      <p class="num"><span>(08)</span> Contacto</p>
+      <h2>¿Tenés una producción en mente? <em>Hablemos.</em></h2>
+    </header>
     <ul class="contacto">
-      <li>
-        <span>WhatsApp</span>
-        <a href="#contacto" data-link="whatsapp"><span data-texto="whatsapp" class="completar">[completar número]</span></a>
-      </li>
-      <li>
-        <span>Instagram</span>
-        <a href="#contacto" data-link="instagram"><span data-texto="instagram" class="completar">[completar usuario]</span></a>
-      </li>
-      <li>
-        <span>Mail</span>
-        <a href="#contacto" data-link="mail"><span data-texto="mail" class="completar">[completar mail]</span></a>
-      </li>
-      <li>
-        <span>Dirección</span>
-        <a href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Av. Callao 194 U5, Congreso, CABA</a>
-      </li>
+      <li><span>WhatsApp</span><a href="#contacto" data-link="whatsapp"><span data-texto="whatsapp" class="completar">[completar número]</span></a></li>
+      <li><span>Instagram</span><a href="#contacto" data-link="instagram"><span data-texto="instagram" class="completar">[completar usuario]</span></a></li>
+      <li><span>Mail</span><a href="#contacto" data-link="mail"><span data-texto="mail" class="completar">[completar mail]</span></a></li>
+      <li><span>Dirección</span><a href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Av. Callao 194 U5, Congreso, CABA</a></li>
     </ul>
-    <a href="#reservar" class="btn btn-principal">Reservar</a>
+    <a href="#reservar" class="btn">Reservar <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
 </main>
 
 <footer class="pie">
-  <p><strong>PIMENTA Estudios</strong> · Alquiler de estudio fotográfico en Congreso, CABA</p>
+  <img src="img/logo-claro.png" alt="PIMENTA" width="90" height="93" loading="lazy">
+  <p>Alquiler de estudio fotográfico en Congreso, CABA</p>
   <p>© <span id="anio">2026</span> PIMENTA Estudios</p>
 </footer>
 
 <!-- Botón flotante de WhatsApp (visible en toda la página) -->
 <a href="#contacto" data-link="whatsapp" class="whatsapp" aria-label="Escribinos por WhatsApp">
-  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 5 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6l-.6-.3z"/></svg>
+  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 5 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6l-.6-.3z"/></svg>
 </a>
 
-<!-- Visor para ver las fotos de la galería en grande -->
+<!-- Visor para ver las fotos en grande -->
 <dialog id="visor" class="visor" aria-label="Foto ampliada">
   <img id="visor-img" src="" alt="">
   <p>Tocá en cualquier lado para cerrar</p>

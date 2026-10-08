@@ -1,15 +1,15 @@
 # Fotos de la web
 
-Subí acá las fotos **con estos nombres exactos** (en minúscula, formato `.jpg`):
+Las fotos salieron del PDF de PIMENTA y ya están achicadas para que carguen rápido.
 
-| Nombre | Dónde aparece | Consejo |
-|---|---|---|
-| `portada.jpg` | Foto grande de arriba + vista previa al compartir el link | La mejor foto del estudio. Horizontal. |
-| `estudio-1.jpg` | Sección "El estudio" (grande) | Vista general del espacio. Vertical. |
-| `estudio-2.jpg` | Sección "El estudio" (chica) | Equipamiento o fondos. |
-| `galeria-1.jpg` a `galeria-9.jpg` | Galería | Producciones hechas en el estudio. Mejor verticales. |
+| Archivo | Dónde aparece |
+|---|---|
+| `portada.jpg` | Foto grande de arriba |
+| `espacio-escritorio.jpg` | Foto chica de la portada (en compu) |
+| `compartir.jpg` | Vista previa al compartir el link por WhatsApp o Instagram (1200 × 630) |
+| `espacio-ventanal.jpg`, `espacio-2.jpg` | Espacio I y Espacio II |
+| `espacio-1.jpg` | Bloque "La luz" |
+| `produccion-1.jpg` a `produccion-12.jpg` | Galería de producciones |
 
-Mientras falte una foto, la web muestra un cuadro rayado que dice **[completar foto]**.
-
-**Para que carguen rápido:** cada foto idealmente de unos 1600 px de ancho y menos de 400 KB.
-Si no sabés cómo achicarlas, subilas como estén y pedile a Claude que las optimice.
+**Para cambiar una foto:** subí la nueva con el MISMO nombre y reemplazá la anterior.
+Idealmente de unos 1200 px de ancho y menos de 300 KB (si no sabés cómo achicarla, pedíselo a Claude).
