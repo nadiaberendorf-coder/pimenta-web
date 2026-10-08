@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nadiaberendorf-coder.github.io/pimenta-web/sitemap.xml
