@@ -13,13 +13,17 @@
     instagram: d.instagram ? "https://www.instagram.com/" + d.instagram.replace(/^@/, "") + "/" : "",
     mail: d.mail ? "mailto:" + d.mail : "",
     tour360: d.tour360 || "",
-    visita: d.visita || ""
+    visita: d.visita || "",
+    reunion: d.reunion || "",
+    google: d.google || ""
   };
   var textos = {
     whatsapp: d.whatsapp ? lindoTel(d.whatsapp.replace(/\D/g, "")) : "",
     instagram: d.instagram ? "@" + d.instagram.replace(/^@/, "") : "",
     mail: d.mail || "",
-    sena: d.sena || ""
+    sena: d.sena || "",
+    googlePuntaje: d.googlePuntaje || "",
+    googleResenas: d.googleResenas || ""
   };
 
   // Links: si el dato está cargado, el link apunta ahí; si no, lleva a Contacto

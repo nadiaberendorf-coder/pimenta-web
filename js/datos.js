@@ -12,6 +12,8 @@ window.PIMENTA = {
   calendly: "https://calendly.com/pimentaestudios",
   // Link para agendar una visita al estudio (15 min)
   visita: "https://calendly.com/pimentaestudios/visita",
+  // Link para una reunión virtual de 15 min sobre el servicio de fotografía
+  reunion: "https://calendly.com/pimentaestudios/reunion",
   // WhatsApp: SOLO números, con 54 9 adelante y sin el 15. Ejemplo: "5491123456789"
   whatsapp: "5491124845148",
   // Instagram, sin la @
@@ -20,6 +22,12 @@ window.PIMENTA = {
   mail: "holapimenta@gmail.com",
   // Link del tour virtual 360°
   tour360: "https://kuula.co/share/collection/7Dlsd?logo=-1&info=0&fs=1&vr=0&zoom=1&gyro=0&initload=0&thumbs=1&inst=es",
+  // ---------- GOOGLE ----------
+  // Link a tus reseñas de Google (el de "Escribir una reseña" o el de Maps)
+  google: "https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6",
+  // Puntaje y cantidad de reseñas, como aparecen en tu ficha de Google. Ejemplo: "4,9" y "150"
+  googlePuntaje: "",
+  googleResenas: "",
   // Mensaje que aparece escrito cuando alguien toca el botón de WhatsApp
   mensajeWhatsapp: "¡Hola PIMENTA! Quiero consultar por el alquiler del estudio.",
 

@@ -391,3 +391,33 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 @media (min-width: 760px) { .tour-cab { flex-direction: row; align-items: baseline; } }
 
 .specs dd small { font-family: var(--f-mono); font-size: 11px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-left: 8px; }
+
+/* ---------- Fotografía y Eventos ---------- */
+.dos-col { display: grid; gap: 48px; }
+.dos-col .tabla-datos { margin-bottom: 28px; }
+.dos-col .tabla-datos div { grid-template-columns: 6.5rem 1fr; }
+.dos-col .tabla-datos dd { color: var(--tinta); max-width: 44ch; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+.condiciones-linea { margin-top: 40px; padding-top: 12px; border-top: var(--hair); color: var(--gris); font-size: 13px; max-width: 48ch; }
+@media (min-width: 760px) {
+  .dos-col { grid-template-columns: 5fr 7fr; column-gap: calc(var(--gutter) * 2); align-items: start; }
+}
+
+/* ---------- Lo que dicen ---------- */
+.google { display: grid; gap: 6px; padding: 14px 0 22px; border-top: 1px solid var(--tinta); border-bottom: var(--hair); margin-bottom: 48px; }
+.google-num { font-family: var(--f-sans); font-weight: 500; font-size: clamp(56px, 12vw, 120px); letter-spacing: -0.05em; line-height: .9; }
+.google-texto { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
+.citas { list-style: none; padding: 0; display: grid; gap: 0; }
+.cita { padding: 28px 0; border-bottom: var(--hair); display: grid; gap: 14px; }
+.cita blockquote { margin: 0; font-family: var(--f-serif); font-style: italic; font-size: clamp(24px, 5.6vw, 34px); line-height: 1.12; letter-spacing: -0.01em; max-width: 24ch; }
+.cita blockquote::before { content: "\201C"; } .cita blockquote::after { content: "\201D"; }
+.cita-grande blockquote { font-size: clamp(32px, 8vw, 72px); line-height: 1.02; letter-spacing: -0.02em; max-width: 18ch; }
+.cita-de { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
+@media (min-width: 760px) {
+  .google { grid-template-columns: auto 1fr auto; align-items: end; column-gap: 24px; }
+  .google .link { justify-self: end; margin-bottom: 6px; }
+  .citas { grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .cita { grid-column: span 4; padding: 36px 0 40px; border-top: var(--hair); border-bottom: 0; align-content: start; }
+  .cita-grande { grid-column: 1 / 9; }
+  .citas .cita:nth-child(2) { grid-column: 9 / 13; margin-top: 120px; }
+}
