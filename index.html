@@ -6,7 +6,7 @@
   <title>PIMENTA Estudios | Alquiler de estudio fotográfico en Congreso, CABA</title>
   <meta name="description" content="Alquiler de estudio fotográfico con luz natural en Congreso, CABA (Av. Callao 194). 85 m², 4,5 m de altura, equipos y mobiliario incluidos. Por hora, para fotógrafos, content creators y marcas.">
   <link rel="canonical" href="https://nadiaberendorf-coder.github.io/pimenta-web/">
-  <meta name="theme-color" content="#FAFAF8">
+  <meta name="theme-color" content="#F4F1EC">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/favicon.png">
 
@@ -32,7 +32,7 @@
     "description": "Alquiler de estudio fotográfico por hora con luz natural, equipos y mobiliario incluidos. Para producciones de foto y video, content creators, marcas y eventos.",
     "url": "https://nadiaberendorf-coder.github.io/pimenta-web/",
     "image": "https://nadiaberendorf-coder.github.io/pimenta-web/fotos/compartir.jpg",
-    "logo": "https://nadiaberendorf-coder.github.io/pimenta-web/img/logo-rojo.png",
+    "logo": "https://nadiaberendorf-coder.github.io/pimenta-web/img/logo-negro.png",
     "hasMap": "https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6",
     "sameAs": ["https://www.instagram.com/pimentaestudios/"],
     "priceRange": "$$",
@@ -60,7 +60,7 @@
 <!-- ===================== MENÚ ===================== -->
 <header class="barra" id="barra">
   <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">
-    <img src="img/logo-rojo.png" alt="PIMENTA" width="150" height="155">
+    <img src="img/logo-negro.png" alt="PIMENTA" width="150" height="155">
   </a>
   <nav id="menu" class="menu" aria-label="Secciones">
     <a href="#estudio"><span>01</span> El estudio</a>
@@ -94,9 +94,10 @@
     <figure class="portada-foto">
       <img src="fotos/portada.jpg" alt="Espacio de PIMENTA Estudios con ventanales altos, piso de madera y sol entrando por la mañana" fetchpriority="high">
       <figcaption>(01) Espacio I — Ventanales sobre Callao</figcaption>
+      <div class="sello" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circulo-a" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#circulo-a" textLength="292">TODO INCLUIDO ✳ UNA SOLA TARIFA ✳</textPath></text></svg><span>All<br>in</span></div>
     </figure>
     <div class="portada-lado">
-      <p class="bajada">Alquiler por hora para fotógrafos, content creators y marcas. Equipos, mobiliario y asistencia incluidos: llegás y producís.</p>
+      <p class="bajada"><strong>Una sola tarifa, todo incluido.</strong> El estudio completo, equipos, infinito, mobiliario y asistencia: llegás y producís, sin pagar nada aparte.</p>
       <div class="botones">
         <a href="#reservar" class="btn">Reservar <span aria-hidden="true">→</span></a>
         <a href="#tarifas" class="btn btn-linea">Ver tarifas</a>
@@ -119,8 +120,8 @@
 
 <div class="cinta" aria-hidden="true">
   <div class="cinta-pista">
-    <span>Fotografía</span><span>Video</span><span>Campañas</span><span>E-commerce</span><span>Contenido</span><span>Eventos</span>
-    <span>Fotografía</span><span>Video</span><span>Campañas</span><span>E-commerce</span><span>Contenido</span><span>Eventos</span>
+    <span>Todo incluido</span><span>Estudio completo</span><span>Equipos</span><span>Infinito</span><span>Mobiliario</span><span>Asistencia</span><span>Café y wifi</span>
+    <span>Todo incluido</span><span>Estudio completo</span><span>Equipos</span><span>Infinito</span><span>Mobiliario</span><span>Asistencia</span><span>Café y wifi</span>
   </div>
 </div>
 
@@ -167,8 +168,19 @@
           <li>Espacio de makeup con luz natural</li>
           <li>4 percheros de hierro blanco y negro</li>
         </ul>
-        <a href="#estudio" data-link="tour360" class="link-flecha">Recorrer el tour virtual 360° <span class="completar" data-si-falta="tour360">[completar link]</span></a>
+        <a href="#tour" class="link-flecha">Recorrerlo en 360°</a>
       </div>
+    </div>
+
+    <div class="tour aparecer" id="tour">
+      <div class="tour-marco" id="tour-marco">
+        <img src="fotos/espacio-infinito.jpg" alt="Vista del Espacio II con el infinito, luces y estantería" loading="lazy">
+        <button type="button" id="tour-boton" class="tour-boton">
+          <span class="tour-360">360°</span>
+          <span>Recorrer el estudio</span>
+        </button>
+      </div>
+      <p class="num">Tour virtual — Movete por los dos espacios, el hall y los balcones</p>
     </div>
 
     <div class="luz aparecer">
@@ -192,7 +204,7 @@
     <header class="titulo-seccion aparecer">
       <p class="num"><span>(02)</span> Todo incluido</p>
       <h2>Un estudio <em>all inclusive</em>.</h2>
-      <p class="intro">Resolvé e-commerce, campaña y contenido para redes en una sola producción. Todo esto ya está incluido en la tarifa.</p>
+      <p class="intro">Resolvé e-commerce, campaña y contenido para redes en una sola producción. <strong>Todo lo de esta lista ya está en la tarifa: no pagás nada aparte.</strong></p>
     </header>
 
     <div class="pestanas aparecer" role="tablist" aria-label="Qué incluye">
@@ -260,23 +272,34 @@
   <div class="contenedor">
     <header class="titulo-seccion aparecer">
       <p class="num"><span>(03)</span> Tarifas</p>
-      <h2>A más horas, <em>menor precio</em>.</h2>
-      <p class="intro">Estudio completo con equipos, mobiliario, servicios y asistencia de locación. Reservando online tenés el <strong>precio web</strong>.</p>
+      <h2>Una tarifa. <em>Todo incluido.</em></h2>
+      <p class="intro">Pagás por hora y el estudio es tuyo, completo. A más horas, menor precio. Reservando online tenés el <strong>precio web</strong>.</p>
     </header>
 
+    <div class="incluye aparecer">
+      <div class="sello" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circulo-b" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#circulo-b" textLength="292">TODO INCLUIDO ✳ UNA SOLA TARIFA ✳</textPath></text></svg><span>All<br>in</span></div>
+      <p class="num">En cada hora, sin extras</p>
+      <ul class="incluye-lista">
+        <li>Los 2 espacios de tiro: 85 m²</li>
+        <li>Hall, cocina, toilet y balcones</li>
+        <li>Asistente de locación</li>
+        <li>Flashes, luces continuas y LED</li>
+        <li>Infinito blanco, azul, negro y rosa</li>
+        <li>Todo el mobiliario</li>
+        <li>Probador y espacio de makeup</li>
+        <li>Café, té, mate y wifi</li>
+      </ul>
+      <p class="incluye-cierre">No pagás nada aparte.</p>
+      <p class="opcional">Único servicio opcional: cama Queen Calm es Simple con sábanas de algodón (almendra, grises o blancas) y almohadas — $35.000.</p>
+    </div>
+
     <div class="tarifas-caja aparecer">
-      <div class="tarifas-top">
-        <div class="selector" role="radiogroup" aria-label="Tipo de día">
-          <button role="radio" aria-checked="true" data-dia="habil">Día hábil</button>
-          <button role="radio" aria-checked="false" data-dia="noHabil">Fin de semana y feriados</button>
-        </div>
-        <p class="cuenta" id="cuenta" hidden></p>
-      </div>
+      <p class="cuenta" id="cuenta" hidden></p>
 
       <table class="tabla-precios">
         <caption class="oculto">Tarifas de alquiler de PIMENTA Estudios según cantidad de horas</caption>
         <thead>
-          <tr><th scope="col">Horas</th><th scope="col">Precio web</th><th scope="col" class="col-hora">Por hora</th></tr>
+          <tr><th scope="col">Horas</th><th scope="col">Precio web · todo incluido</th><th scope="col" class="col-hora">Por hora</th></tr>
         </thead>
         <tbody id="tabla-precios"></tbody>
       </table>
@@ -289,14 +312,6 @@
     </div>
 
     <div class="extra-grid">
-      <div class="extra aparecer">
-        <h3>Adicionales</h3>
-        <ul class="lista-fina">
-          <li><span>Cama Queen (sommier + colchón Calm es Simple) con sábanas blancas, grises o almendra de seda</span><span>$30.000</span></li>
-          <li><span>Infinito sin piso</span><span>$15.000 / metro</span></li>
-          <li><span>Vajilla variada para producción</span><span>Consultar</span></li>
-        </ul>
-      </div>
       <div class="extra extra-bordo aparecer">
         <h3>¿Evento o más de 10 personas?</h3>
         <p>Lanzamientos, showrooms, cenas, talleres. Armamos un presupuesto a medida.</p>
@@ -353,7 +368,7 @@
       <li class="aparecer">
         <span class="paso-num">03</span>
         <h3>Vení a producir</h3>
-        <p>El día de la producción pagás el saldo y te recibe la asistente de locación.</p>
+        <p>El día de la producción pagás el saldo y el estudio completo es tuyo, con todo incluido. Te recibe la asistente de locación.</p>
       </li>
     </ol>
 
@@ -383,7 +398,7 @@
     <div class="faq">
       <details>
         <summary>¿Qué incluye el alquiler?</summary>
-        <p>El estudio completo con equipos, mobiliario, servicios y asistencia de locación. Fijate el detalle en <a href="#incluido">Todo incluido</a>.</p>
+        <p>Todo. Una sola tarifa incluye el estudio completo (los dos espacios, el hall, la cocina y los balcones), la asistente de locación, los equipos, el infinito y el mobiliario. No pagás nada aparte. Mirá el detalle en <a href="#incluido">Todo incluido</a>.</p>
       </details>
       <details>
         <summary>¿Incluye fotógrafo?</summary>

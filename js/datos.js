@@ -19,7 +19,7 @@ window.PIMENTA = {
   // Mail de contacto
   mail: "holapimenta@gmail.com",
   // Link del tour virtual 360°
-  tour360: "",
+  tour360: "https://kuula.co/share/collection/7Dlsd?logo=-1&info=0&fs=1&vr=0&zoom=1&gyro=0&initload=0&thumbs=1&inst=es",
   // Mensaje que aparece escrito cuando alguien toca el botón de WhatsApp
   mensajeWhatsapp: "¡Hola PIMENTA! Quiero consultar por el alquiler del estudio.",
 
@@ -28,19 +28,20 @@ window.PIMENTA = {
   sena: "70%",
 
   // ---------- PRECIOS ----------
+  // Una sola tarifa, todo incluido.
   // "web" = precio reservando online (el que se destaca).
-  // "habil" y "noHabil" = precio de lista (aparece tachado si es mayor al precio web).
+  // "lista" = precio de lista (aparece tachado si es mayor al precio web).
   // Escribí los números SIN puntos ni signos.
   tarifas: [
-    { horas: 1,  habil: 89000,  noHabil: 99000,  web: 79000 },
-    { horas: 2,  habil: 159000, noHabil: 169000, web: 159000 },
-    { horas: 3,  habil: 219000, noHabil: 229000, web: 219000 },
-    { horas: 4,  habil: 289000, noHabil: 299000, web: 279000 },
-    { horas: 5,  habil: 349000, noHabil: 359000, web: 339000 },
-    { horas: 6,  habil: 389000, noHabil: 399000, web: 389000 },
-    { horas: 8,  habil: 489000, noHabil: 499000, web: 459000 },
-    { horas: 10, habil: 549000, noHabil: 549000, web: 499000 },
-    { horas: 12, habil: 579000, noHabil: 579000, web: 539000 }
+    { horas: 1,  lista: 89000,  web: 79000 },
+    { horas: 2,  lista: 159000, web: 159000 },
+    { horas: 3,  lista: 219000, web: 219000 },
+    { horas: 4,  lista: 289000, web: 279000 },
+    { horas: 5,  lista: 349000, web: 339000 },
+    { horas: 6,  lista: 389000, web: 389000 },
+    { horas: 8,  lista: 489000, web: 459000 },
+    { horas: 10, lista: 549000, web: 499000 },
+    { horas: 12, lista: 579000, web: 539000 }
   ],
 
   // Fecha límite del precio web (opcional). Si la completás, aparece

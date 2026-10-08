@@ -49,10 +49,10 @@
     return (m < 0 || t.web / t.horas < tarifas[m].web / tarifas[m].horas) ? i : m;
   }, -1);
 
-  function dibujarTabla(dia) {
+  function dibujarTabla() {
     if (!cuerpo) return;
     cuerpo.innerHTML = tarifas.map(function (t, i) {
-      var lista = t[dia];
+      var lista = t.lista;
       var ahorro = lista - t.web;
       return '<tr' + (i === mejor ? ' class="fila-top"' : '') + '>' +
         '<td class="t-horas">' + t.horas + '<small>' + (t.horas === 1 ? 'hora' : 'horas') + '</small></td>' +
@@ -64,14 +64,7 @@
       '</tr>';
     }).join("");
   }
-  dibujarTabla("habil");
-  document.querySelectorAll(".selector button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      document.querySelectorAll(".selector button").forEach(function (x) { x.setAttribute("aria-checked", "false"); });
-      b.setAttribute("aria-checked", "true");
-      dibujarTabla(b.getAttribute("data-dia"));
-    });
-  });
+  dibujarTabla();
 
   // Cuenta regresiva del precio web (solo si se cargó una fecha)
   var cuenta = document.getElementById("cuenta");
@@ -99,6 +92,29 @@
     cal.innerHTML = "";
     cal.appendChild(iframe);
     cal.classList.add("calendly--activo");
+  }
+
+  /* --- Tour 360°: se carga recién cuando lo tocan, para que la web sea rápida --- */
+  var tourBoton = document.getElementById("tour-boton");
+  if (tourBoton && d.tour360 && window.PIMENTA_VISTA_PREVIA) {
+    // en la vista previa de Claude el tour se abre en otra pestaña
+    var a = document.createElement("a");
+    a.className = tourBoton.className; a.innerHTML = tourBoton.innerHTML;
+    a.href = d.tour360; a.target = "_blank"; a.rel = "noopener";
+    tourBoton.replaceWith(a);
+  } else if (tourBoton && d.tour360) {
+    tourBoton.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = d.tour360;
+      f.title = "Tour virtual 360° de PIMENTA Estudios";
+      f.allow = "xr-spatial-tracking; gyroscope; accelerometer; fullscreen";
+      f.allowFullscreen = true;
+      var marco = document.getElementById("tour-marco");
+      marco.innerHTML = "";
+      marco.appendChild(f);
+    });
+  } else if (tourBoton) {
+    document.getElementById("tour").hidden = true;
   }
 
   /* --- Pestañas de "Todo incluido" --- */
