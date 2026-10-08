@@ -6,7 +6,7 @@
   <title>PIMENTA Estudios | Alquiler de estudio fotográfico en Congreso, CABA</title>
   <meta name="description" content="Alquiler de estudio fotográfico con luz natural en Congreso, CABA (Av. Callao 194). Una sola tarifa con todo incluido: 85 m², 4,5 m de altura, equipos, infinito, mobiliario y asistencia.">
   <link rel="canonical" href="https://nadiaberendorf-coder.github.io/pimenta-web/">
-  <meta name="theme-color" content="#E7E5E1">
+  <meta name="theme-color" content="#F7F5F1">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/favicon.png">
 
@@ -52,7 +52,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="fotos/portada.jpg">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -62,9 +62,7 @@
 
 <!-- ===================== BARRA ===================== -->
 <header class="barra">
-  <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">
-    <img src="img/logo-claro.png" alt="PIMENTA" width="150" height="155">
-  </a>
+  <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">Pimenta<span class="nota">°</span></a>
   <nav class="nav" aria-label="Secciones">
     <a href="#estudio">Estudio</a>
     <a href="#incluido">Incluido</a>
@@ -74,7 +72,7 @@
     <a href="#ubicacion">Ubicación</a>
   </nav>
   <div class="barra-der">
-    <a href="#reservar" class="barra-reservar">Reservar ↗</a>
+    <a href="#reservar" class="barra-reservar">(Reservar →)</a>
     <button id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu">Menú</button>
   </div>
 </header>
@@ -96,6 +94,12 @@
 <!-- ===================== PORTADA ===================== -->
 <section id="inicio" class="hero">
   <img class="hero-foto" src="fotos/portada.jpg" alt="Espacio de PIMENTA Estudios con ventanales altos, piso de madera y sol entrando por la mañana" fetchpriority="high">
+  <div class="hero-esquinas" aria-hidden="true">
+    <span>(01) — Estudio</span>
+    <span>Av. Callao 194 · Congreso</span>
+    <span>Luz natural · 365 días</span>
+    <span>2026/10</span>
+  </div>
   <h1 class="hero-marca">
     <span class="oculto">PIMENTA Estudios: alquiler de estudio fotográfico en Congreso, CABA</span>
     <span class="letras" aria-hidden="true"><span>P</span><span>I</span><span>M</span><span>E</span><span>N</span><span>T</span><span>A</span></span>
@@ -104,11 +108,11 @@
 
 <!-- Presentación -->
 <section class="presenta">
-  <p class="indice">(001)</p>
-  <p class="presenta-texto">Un estudio de luz natural en Congreso. <strong>Una sola tarifa con todo incluido:</strong> el estudio completo, equipos, infinito, mobiliario y asistencia. Llegás y producís.</p>
+  <p class="indice">(001) — Index</p>
+  <p class="presenta-texto">Un estudio de <em>luz natural</em> en Congreso. Una sola tarifa con <em class="nota">todo incluido</em>: el estudio completo, equipos, infinito, mobiliario y asistencia. Llegás y producís.</p>
   <div class="presenta-acciones">
-    <a href="#reservar" class="btn">Reservar</a>
-    <a href="#tarifas" class="link">Ver tarifas</a>
+    <a href="#reservar" class="btn">Reservar →</a>
+    <a href="#tarifas" class="link">Ver tarifas ↗</a>
   </div>
   <dl class="specs">
     <div><dt>Superficie</dt><dd>85 m²</dd></div>
@@ -126,8 +130,8 @@
 <!-- ===================== 01 EL ESTUDIO ===================== -->
 <section id="estudio" class="seccion">
   <header class="cab">
-    <p class="indice">01</p>
-    <h2>El estudio</h2>
+    <p class="indice">(01) — El estudio</p>
+    <h2>El estudio<span class="nota">.</span></h2>
     <p class="cab-texto">Techos de 4,5 metros, molduras, pisos de pinotea y ventanales sobre Callao. Dos espacios de tiro, recepción, cocina y balcones. Se alquila completo: es todo tuyo.</p>
   </header>
 
@@ -161,10 +165,10 @@
   <div class="plano-bloque">
     <figure class="plano">
       <img src="img/plano.png" alt="Plano de PIMENTA Estudios: Espacio I de 50 m², Espacio II de 35 m² con infinito, recepción, catering, cocina, toilette, privado y dos balcones" loading="lazy" width="683" height="809">
-      <figcaption>Planta — se alquila completa</figcaption>
+      <figcaption>Planta — se alquila completa · sin escala</figcaption>
     </figure>
     <div>
-      <h3 class="subtit">Además del set</h3>
+      <h3 class="subtit">[ Además del set ]</h3>
       <ol class="lista">
         <li>Hall de recepción con espacio para catering</li>
         <li>Cocina completamente equipada</li>
@@ -183,14 +187,14 @@
       <div class="vidrio" aria-hidden="true"></div>
       <button type="button" id="tour-boton" class="tour-boton">
         <span class="tour-360">360°</span>
-        <span>Recorrer el estudio ↗</span>
+        <span>[ Recorrer el estudio ↗ ]</span>
       </button>
     </div>
-    <p class="pie-foto">Tour virtual — los dos espacios, el hall y los balcones</p>
+    <p class="pie-foto">(03) — Tour virtual · los dos espacios, el hall y los balcones</p>
   </div>
 
   <div class="luz">
-    <h3 class="subtit">La luz, hora por hora</h3>
+    <h3 class="subtit">[ La luz, hora por hora ]</h3>
     <div class="luz-grid">
       <div><p class="luz-hora">Mañana</p><p>Sol directo y el mayor ingreso de luz.</p></div>
       <div><p class="luz-hora">Mediodía</p><p>Todavía entra un poco de sol.</p></div>
@@ -202,9 +206,9 @@
 <!-- ===================== 02 TODO INCLUIDO ===================== -->
 <section id="incluido" class="seccion piedra">
   <header class="cab">
-    <p class="indice">02</p>
-    <h2 class="apilado"><span>Todo</span><span>inclu</span><span>ido</span></h2>
-    <p class="cab-texto">Resolvé e-commerce, campaña y contenido para redes en una sola producción. Todo lo de esta lista ya está en la tarifa: <strong>no pagás nada aparte.</strong></p>
+    <p class="indice">(02) — Todo incluido</p>
+    <h2 class="display">Todo<br>incluido<span class="nota">.</span></h2>
+    <p class="cab-texto">Resolvé e-commerce, campaña y contenido para redes en una sola producción. Todo lo de esta lista ya está en la tarifa: <em>no pagás nada aparte.</em></p>
   </header>
 
   <div class="pestanas" role="tablist" aria-label="Qué incluye">
@@ -215,7 +219,7 @@
 
   <div class="panel" role="tabpanel" id="tab-equipos" aria-labelledby="b-equipos">
     <ol class="lista lista-col">
-      <li>Infinito ciclorama 2,72 × 3 m: blanco, azul, negro y rosa</li>
+      <li>Infinito ciclorama 2,72 × 3 m: blanco, azul, negro y rosa <span class="nota-mini">¿No encontrás el color que necesitás? Lo pedimos para vos.</span></li>
       <li>2 flashes Visico 600W con luz de modelado 25W</li>
       <li>Flash Visico 300W de apoyo</li>
       <li>Luz continua RGB 500W, montura Bowens</li>
@@ -269,9 +273,9 @@
 <!-- ===================== 03 TARIFAS ===================== -->
 <section id="tarifas" class="seccion">
   <header class="cab">
-    <p class="indice">03</p>
-    <h2>Tarifas</h2>
-    <p class="cab-texto">Una sola tarifa con todo incluido. Pagás por hora y el estudio es tuyo, completo. A más horas, menor precio. Reservando online tenés el <strong>precio web</strong>.</p>
+    <p class="indice">(03) — Tarifas</p>
+    <h2>Tarifas<span class="nota">.</span></h2>
+    <p class="cab-texto">Una sola tarifa con todo incluido. Pagás por hora y el estudio es tuyo, completo. A más horas, menor precio. Reservando online tenés el <em>precio web</em>.</p>
   </header>
 
   <div class="tarifas">
@@ -287,7 +291,7 @@
     </div>
 
     <aside class="tarifas-lado">
-      <p class="indice">En cada hora, sin extras</p>
+      <p class="indice">[ En cada hora, sin extras ]</p>
       <ul class="incluye-lista">
         <li>Los 2 espacios de tiro</li>
         <li>Hall, cocina y balcones</li>
@@ -310,32 +314,32 @@
   </ul>
 
   <div class="evento">
-    <p class="indice">Eventos</p>
+    <p class="indice">[ Eventos ]</p>
     <p class="evento-texto">¿Evento o más de 10 personas? Lanzamientos, showrooms, cenas y talleres con presupuesto a medida.</p>
-    <a href="#contacto" data-link="whatsapp" class="btn">Pedir presupuesto</a>
+    <a href="#contacto" data-link="whatsapp" class="link">Pedir presupuesto ↗</a>
   </div>
 </section>
 
 <!-- ===================== 04 PRODUCCIONES ===================== -->
 <section id="galeria" class="seccion piedra">
   <header class="cab">
-    <p class="indice">04</p>
-    <h2>Hecho en Pimenta</h2>
+    <p class="indice">(04) — Producciones · 1/12</p>
+    <h2>Hecho <em>en</em> Pimenta<span class="nota">.</span></h2>
     <p class="cab-texto">Retratos, moda, campañas y contenido de marcas producidos en el estudio.</p>
   </header>
   <div class="galeria">
-    <figure><button type="button" aria-label="Ver foto 1 en grande"><img src="fotos/produccion-1.jpg" alt="Retrato de mujer con traje negro frente a una puerta de madera antigua" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 2 en grande"><img src="fotos/produccion-2.jpg" alt="Modelo con vestido negro frente al infinito blanco con flash y paraguas" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 3 en grande"><img src="fotos/produccion-3.jpg" alt="Modelo apoyada en el balcón con edificios de Avenida Callao de fondo" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 4 en grande"><img src="fotos/produccion-4.jpg" alt="Modelo con vestido rosa de tul junto a la ventana" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 5 en grande"><img src="fotos/produccion-5.jpg" alt="Modelo con sweater amarillo frente al ventanal con cúpula de fondo" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 6 en grande"><img src="fotos/produccion-6.jpg" alt="Modelo con campera negra en el balcón de hierro" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 7 en grande"><img src="fotos/produccion-7.jpg" alt="Retrato editorial de dos mujeres con luz natural dura" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 8 en grande"><img src="fotos/produccion-8.jpg" alt="Hombre con saco negro apoyado en una puerta de madera" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 9 en grande"><img src="fotos/produccion-9.jpg" alt="Modelo con look total black frente a los ventanales" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 10 en grande"><img src="fotos/produccion-10.jpg" alt="Retrato de mujer con top negro sobre fondo de madera cálida" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 11 en grande"><img src="fotos/produccion-11.jpg" alt="Modelo con jean y musculosa blanca apoyada en la pared junto a la ventana" loading="lazy"></button></figure>
-    <figure><button type="button" aria-label="Ver foto 12 en grande"><img src="fotos/produccion-12.jpg" alt="Foto en blanco y negro de mujer embarazada con tela blanca en el balcón" loading="lazy"></button></figure>
+    <figure><button type="button" aria-label="Ver foto 1 en grande"><img src="fotos/produccion-1.jpg" alt="Retrato de mujer con traje negro frente a una puerta de madera antigua" loading="lazy"></button><figcaption>(01) — Retrato — puerta de madera</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 2 en grande"><img src="fotos/produccion-2.jpg" alt="Modelo con vestido negro frente al infinito blanco con flash y paraguas" loading="lazy"></button><figcaption>(02) — Moda — infinito blanco</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 3 en grande"><img src="fotos/produccion-3.jpg" alt="Modelo apoyada en el balcón con edificios de Avenida Callao de fondo" loading="lazy"></button><figcaption>(03) — Contenido — balcón</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 4 en grande"><img src="fotos/produccion-4.jpg" alt="Modelo con vestido rosa de tul junto a la ventana" loading="lazy"></button><figcaption>(04) — Moda — ventana</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 5 en grande"><img src="fotos/produccion-5.jpg" alt="Modelo con sweater amarillo frente al ventanal con cúpula de fondo" loading="lazy"></button><figcaption>(05) — Campaña — ventanal</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 6 en grande"><img src="fotos/produccion-6.jpg" alt="Modelo con campera negra en el balcón de hierro" loading="lazy"></button><figcaption>(06) — Moda — balcón</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 7 en grande"><img src="fotos/produccion-7.jpg" alt="Retrato editorial de dos mujeres con luz natural dura" loading="lazy"></button><figcaption>(07) — Editorial — luz dura</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 8 en grande"><img src="fotos/produccion-8.jpg" alt="Hombre con saco negro apoyado en una puerta de madera" loading="lazy"></button><figcaption>(08) — Retrato — puerta</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 9 en grande"><img src="fotos/produccion-9.jpg" alt="Modelo con look total black frente a los ventanales" loading="lazy"></button><figcaption>(09) — Moda — ventanales</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 10 en grande"><img src="fotos/produccion-10.jpg" alt="Retrato de mujer con top negro sobre fondo de madera cálida" loading="lazy"></button><figcaption>(10) — Retrato — madera</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 11 en grande"><img src="fotos/produccion-11.jpg" alt="Modelo con jean y musculosa blanca apoyada en la pared junto a la ventana" loading="lazy"></button><figcaption>(11) — Contenido — pared</figcaption></figure>
+    <figure><button type="button" aria-label="Ver foto 12 en grande"><img src="fotos/produccion-12.jpg" alt="Foto en blanco y negro de mujer embarazada con tela blanca en el balcón" loading="lazy"></button><figcaption>(12) — Maternidad — balcón</figcaption></figure>
   </div>
   <a href="#contacto" data-link="instagram" class="link link-centro">Más en Instagram <span data-texto="instagram">@pimentaestudios</span> ↗</a>
 </section>
@@ -343,8 +347,8 @@
 <!-- ===================== 05 RESERVAR ===================== -->
 <section id="reservar" class="seccion">
   <header class="cab">
-    <p class="indice">05</p>
-    <h2>Reservar</h2>
+    <p class="indice">(05) — Reservar</p>
+    <h2>Reservar<span class="nota">.</span></h2>
     <p class="cab-texto">Tres pasos y la fecha es tuya.</p>
   </header>
   <ol class="pasos">
@@ -367,12 +371,12 @@
 
   <div id="calendly" class="calendly">
     <p><span class="completar">[completar link de Calendly]</span></p>
-    <a href="#contacto" data-link="whatsapp" class="btn">Consultar disponibilidad</a>
+    <a href="#contacto" data-link="whatsapp" class="btn">Consultar disponibilidad →</a>
   </div>
 
   <div class="visita">
     <p class="visita-texto">¿Querés conocerlo antes? Agendá una visita de 15 minutos.</p>
-    <a href="#contacto" data-link="visita" class="btn btn-borde">Agendar visita</a>
+    <a href="#contacto" data-link="visita" class="link">Agendar visita ↗</a>
   </div>
 </section>
 
@@ -380,8 +384,8 @@
 <section id="faq" class="seccion piedra">
   <div class="faq-grid">
     <header class="cab cab-sola">
-      <p class="indice">06</p>
-      <h2>Preguntas</h2>
+      <p class="indice">(06) — Preguntas</p>
+      <h2>Preguntas<span class="nota">.</span></h2>
     </header>
     <div class="faq">
       <details>
@@ -435,8 +439,8 @@
 <!-- ===================== 07 UBICACIÓN ===================== -->
 <section id="ubicacion" class="seccion">
   <header class="cab">
-    <p class="indice">07</p>
-    <h2>Callao 194</h2>
+    <p class="indice">(07) — Ubicación</p>
+    <h2>Callao 194<span class="nota">.</span></h2>
     <p class="cab-texto">2.º piso, unidad 5. Congreso, Ciudad Autónoma de Buenos Aires.</p>
   </header>
   <div class="ubicacion">
@@ -495,8 +499,8 @@
 <!-- ===================== 08 CONTACTO ===================== -->
 <section id="contacto" class="seccion oscura contacto-sec">
   <header class="cab">
-    <p class="indice">08</p>
-    <h2>Hablemos</h2>
+    <p class="indice">(08) — Contacto</p>
+    <h2>Hablemos<span class="nota">.</span></h2>
   </header>
   <dl class="contacto">
     <div><dt>WhatsApp</dt><dd><a href="#contacto" data-link="whatsapp"><span data-texto="whatsapp" class="completar">[completar]</span></a></dd></div>
@@ -504,19 +508,20 @@
     <div><dt>Mail</dt><dd><a href="#contacto" data-link="mail"><span data-texto="mail" class="completar">[completar]</span></a></dd></div>
     <div><dt>Dirección</dt><dd><a href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Av. Callao 194, 2.º piso U5</a></dd></div>
   </dl>
-  <a href="#reservar" class="btn btn-claro">Reservar</a>
+  <a href="#reservar" class="btn btn-claro">Reservar →</a>
 </section>
 
 </main>
 
 <footer class="pie">
   <div class="pie-datos">
-    <span>PIMENTA Estudios ©<span id="anio">2026</span></span>
+    <span>Pimenta<span class="nota">©</span><span id="anio">2026</span></span>
     <span>Alquiler de estudio fotográfico — Congreso, CABA</span>
-    <a href="#inicio">Volver arriba ↑</a>
+    <a href="#inicio">[ Volver arriba ↑ ]</a>
   </div>
   <p class="pie-marca" aria-hidden="true">PIMENTA</p>
 </footer>
+<div class="grano" aria-hidden="true"></div>
 
 <!-- Botón flotante de WhatsApp (visible en toda la página) -->
 <a href="#contacto" data-link="whatsapp" class="whatsapp" aria-label="Escribinos por WhatsApp">

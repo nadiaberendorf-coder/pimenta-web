@@ -164,17 +164,18 @@
     menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", cerrarMenu); });
   }
 
-  /* --- Aparecer suave al hacer scroll --- */
-  var aparecen = document.querySelectorAll(".aparecer");
-  if ("IntersectionObserver" in window) {
+  /* --- Aparición suave al hacer scroll (solo lo que está más abajo de la primera pantalla) --- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revelables = document.querySelectorAll(".cab, .presenta-texto, .presenta-acciones, .specs, .ficha, .plano-bloque > *, .tour, .luz, .panel, .pestanas, .tarifas > *, .condiciones, .evento, .galeria figure, .pasos li, .calendly, .visita, .faq, .ubicacion > *, .contacto");
+  if ("IntersectionObserver" in window && !reduce) {
     var obs = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); }
+        if (e.isIntersecting) { e.target.classList.add("in"); obs.unobserve(e.target); }
       });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    aparecen.forEach(function (el) { obs.observe(el); });
-  } else {
-    aparecen.forEach(function (el) { el.classList.add("visible"); });
+    }, { rootMargin: "0px 0px -6% 0px" });
+    revelables.forEach(function (el) {
+      if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add("pre"); obs.observe(el); }
+    });
   }
 
   /* --- Portada: la foto se acomoda suave al bajar --- */
