@@ -162,7 +162,7 @@ h2.display { font-family: var(--f-display); font-weight: 850; letter-spacing: -0
 .foto, .galeria button, .tour-marco { overflow: hidden; background: var(--arena); }
 .foto img, .galeria img, .tour-marco > img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.82) contrast(.94) brightness(1.03); transition: transform 1.2s var(--ease); }
 .foto:hover img, .galeria button:hover img { transform: scale(1.03); }
-figcaption, .pie-foto { margin-top: 10px; }
+figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 
 /* Aparición suave */
 .pre { opacity: 0; transform: translateY(14px); }
@@ -190,7 +190,7 @@ figcaption, .pie-foto { margin-top: 10px; }
 
 .tour { margin-top: var(--seccion); }
 .tour-cab { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-top: var(--hair); padding-top: 10px; margin-bottom: 18px; }
-.tour-cab button { background: none; border: 0; padding: 0 0 3px; cursor: pointer; color: inherit; font: inherit; }
+.tour-cab button { background: none; border: 0; padding: 0 0 3px; cursor: pointer; color: inherit; }
 .tour-marco { position: relative; aspect-ratio: 4 / 5; }
 .tour-marco:hover > img { transform: scale(1.02); }
 .tour-marco iframe { width: 100%; height: 100%; border: 0; display: block; }
@@ -229,8 +229,6 @@ figcaption, .pie-foto { margin-top: 10px; }
 .t-hora { white-space: nowrap; }
 .col-hora { display: none; }
 .fila-top td { background: var(--niebla); }
-.fila-top td:first-child { padding-left: 10px; }
-.fila-top td:last-child { padding-right: 10px; }
 
 .tarifas-lado { border-top: 1px solid var(--tinta); padding-top: 10px; align-self: start; }
 .tarifas-lado .indice { margin-bottom: 10px; }
@@ -239,7 +237,7 @@ figcaption, .pie-foto { margin-top: 10px; }
 .incluye-lista li::before { content: "+"; color: var(--gris); }
 .nada-aparte { font-size: clamp(48px, 13vw, 88px); margin-top: 28px; }
 
-.condiciones { list-style: none; padding: 0; margin-top: 40px; display: grid; gap: 8px; max-width: 60ch; text-transform: none; letter-spacing: .02em; font-size: 11.5px; line-height: 1.6; }
+.condiciones { list-style: none; padding: 0; margin-top: 40px; display: grid; gap: 8px; max-width: 48ch; font-family: var(--f-sans); text-transform: none; letter-spacing: 0; font-size: 13px; line-height: 1.5; }
 .condiciones li::before { content: "— "; }
 .evento { display: grid; gap: 20px; margin-top: var(--seccion); padding-top: 12px; border-top: var(--hair); }
 .evento-texto { font-size: clamp(26px, 5vw, 48px); font-weight: 400; line-height: .98; letter-spacing: -0.045em; max-width: 24ch; }
