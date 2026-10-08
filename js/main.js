@@ -1,15 +1,22 @@
 (function () {
   var d = window.PIMENTA || {};
 
+  // 5491124845148 -> +54 9 11 2484-5148
+  function lindoTel(n) {
+    var x = n.match(/^549(11)(\d{4})(\d{4})$/);
+    return x ? "+54 9 " + x[1] + " " + x[2] + "-" + x[3] : "+" + n;
+  }
+
   /* --- Datos de contacto (vienen de js/datos.js) --- */
   var links = {
     whatsapp: d.whatsapp ? "https://wa.me/" + d.whatsapp.replace(/\D/g, "") + "?text=" + encodeURIComponent(d.mensajeWhatsapp || "") : "",
     instagram: d.instagram ? "https://www.instagram.com/" + d.instagram.replace(/^@/, "") + "/" : "",
     mail: d.mail ? "mailto:" + d.mail : "",
-    tour360: d.tour360 || ""
+    tour360: d.tour360 || "",
+    visita: d.visita || ""
   };
   var textos = {
-    whatsapp: d.whatsapp ? "+" + d.whatsapp.replace(/\D/g, "") : "",
+    whatsapp: d.whatsapp ? lindoTel(d.whatsapp.replace(/\D/g, "")) : "",
     instagram: d.instagram ? "@" + d.instagram.replace(/^@/, "") : "",
     mail: d.mail || "",
     sena: d.sena || ""
@@ -79,7 +86,11 @@
 
   /* --- Calendly --- */
   var cal = document.getElementById("calendly");
-  if (cal && d.calendly) {
+  if (cal && d.calendly && window.PIMENTA_VISTA_PREVIA) {
+    // en la vista previa de Claude no se pueden mostrar calendarios embebidos
+    cal.innerHTML = '<p>Acá aparece tu calendario de Calendly en la web publicada.</p>' +
+      '<a class="btn" href="' + d.calendly + '" target="_blank" rel="noopener">Abrir Calendly</a>';
+  } else if (cal && d.calendly) {
     var iframe = document.createElement("iframe");
     iframe.src = d.calendly + (d.calendly.indexOf("?") > -1 ? "&" : "?") +
       "hide_gdpr_banner=1&embed_type=Inline&embed_domain=" + location.hostname;

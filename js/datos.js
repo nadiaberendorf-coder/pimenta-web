@@ -9,13 +9,15 @@
 window.PIMENTA = {
   // ---------- CONTACTO ----------
   // Link de tu Calendly. Ejemplo: "https://calendly.com/pimenta-estudios/reserva"
-  calendly: "",
+  calendly: "https://calendly.com/pimentaestudios",
+  // Link para agendar una visita al estudio (15 min)
+  visita: "https://calendly.com/pimentaestudios/visita",
   // WhatsApp: SOLO números, con 54 9 adelante y sin el 15. Ejemplo: "5491123456789"
-  whatsapp: "",
+  whatsapp: "5491124845148",
   // Instagram, sin la @
   instagram: "pimentaestudios",
   // Mail de contacto
-  mail: "",
+  mail: "holapimenta@gmail.com",
   // Link del tour virtual 360°
   tour360: "",
   // Mensaje que aparece escrito cuando alguien toca el botón de WhatsApp
@@ -23,7 +25,7 @@ window.PIMENTA = {
 
   // ---------- RESERVA ----------
   // Seña para confirmar. Ejemplo: "50%" o "$40.000"
-  sena: "",
+  sena: "70%",
 
   // ---------- PRECIOS ----------
   // "web" = precio reservando online (el que se destaca).
