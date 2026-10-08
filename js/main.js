@@ -152,11 +152,13 @@
     menu.classList.remove("abierto");
     boton.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
+    boton.textContent = "Menú";
   }
   if (boton) {
     boton.addEventListener("click", function () {
       var abierto = menu.classList.toggle("abierto");
       boton.setAttribute("aria-expanded", abierto);
+      boton.textContent = abierto ? "Cerrar" : "Menú";
       document.body.style.overflow = abierto ? "hidden" : "";
     });
     menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", cerrarMenu); });
@@ -173,6 +175,21 @@
     aparecen.forEach(function (el) { obs.observe(el); });
   } else {
     aparecen.forEach(function (el) { el.classList.add("visible"); });
+  }
+
+  /* --- Portada: la foto se acomoda suave al bajar --- */
+  var hero = document.querySelector(".hero");
+  if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var pendiente = false;
+    window.addEventListener("scroll", function () {
+      if (pendiente) return;
+      pendiente = true;
+      requestAnimationFrame(function () {
+        var s = Math.min(1, window.scrollY / (hero.offsetHeight || 1));
+        hero.style.setProperty("--s", s.toFixed(3));
+        pendiente = false;
+      });
+    }, { passive: true });
   }
 
   /* --- Año del pie --- */
