@@ -437,3 +437,6 @@ figcaption { margin-top: 8px; color: var(--gris); }
 @media (min-width: 1024px) { .tour-marco { aspect-ratio: 16 / 9; } }
 .incluye .sello { background: var(--hueso); color: var(--tinta); }
 .incluye .sello text { fill: var(--tinta); }
+.llegar-lista { margin-bottom: 24px; }
+.llegar-lista li span:first-child { font-weight: 500; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; padding-top: 2px; }
+.llegar-lista li span:last-child { text-align: right; color: var(--gris); }
