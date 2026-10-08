@@ -389,3 +389,5 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 .tour-cab { flex-direction: column; align-items: flex-start; gap: 10px; }
 .tour-cab button { white-space: nowrap; }
 @media (min-width: 760px) { .tour-cab { flex-direction: row; align-items: baseline; } }
+
+.specs dd small { font-family: var(--f-mono); font-size: 11px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-left: 8px; }

@@ -13,3 +13,7 @@ Web de una sola página para PIMENTA Estudios (alquiler de estudio fotográfico 
 ## Dónde se ve
 
 Con GitHub Pages activado: https://nadiaberendorf-coder.github.io/pimenta-web/
+
+## Pendientes para más adelante (pedido de Nadia)
+- Apartado propio para **Open Studio** (feria de marcas).
+- Apartado propio para **Noches PIMENTA** (experiencia para parejas).
