@@ -51,7 +51,7 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; font-siz
 }
 
 /* ---------- Voces tipográficas ---------- */
-.display, .hero-marca, .pie-marca, .repetida, .nada-aparte, .t-horas, .tour-360, .paso-num, .specs dd, .luz-hora, .menu a {
+.display, .hero-marca, .pie-marca, .repetida, .nada-aparte, .t-horas, .paso-num, .specs dd, .luz-hora, .menu a {
   font-family: var(--f-display); font-stretch: 62%; font-variation-settings: "wdth" 62;
   font-weight: 850; text-transform: uppercase; line-height: .85; letter-spacing: -0.01em;
 }
@@ -60,7 +60,7 @@ h2 em { font-size: .92em; letter-spacing: -0.02em; }
 h2.display { font-family: var(--f-display); font-weight: 850; letter-spacing: -0.01em; line-height: .85; font-size: clamp(72px, 15vw, 240px); }
 .micro, .indice, .hero-esquinas, figcaption, .pie-foto, .specs dt, .ficha dt, .tabla-datos dt, .contacto dt, .subtit,
 .nav a, .barra-reservar, .menu-boton, .btn, .link, .pestanas button, .tabla-precios th, .pie-datos,
-.t-lista, .t-ahorro, .t-hora, .t-mejor, .cuenta, .lista li::before, .ficha h3 span, .tour-boton, .visor p, .condiciones, .menu sup {
+.t-lista, .t-ahorro, .t-hora, .t-mejor, .cuenta, .lista li::before, .ficha h3 span, .visor p, .condiciones, .menu sup {
   font-family: var(--f-mono); font-size: 11px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; line-height: 1.4;
 }
 .indice, figcaption, .pie-foto, .specs dt, .ficha dt, .tabla-datos dt, .contacto dt, .tabla-precios th, .pie-datos, .t-lista, .t-hora, .t-mejor, .lista li::before, .condiciones { color: var(--gris); }
@@ -189,20 +189,11 @@ figcaption, .pie-foto { margin-top: 10px; }
 .lista li:hover::before { color: var(--azul); }
 
 .tour { margin-top: var(--seccion); }
-.tour-marco { position: relative; aspect-ratio: 4 / 5; background: var(--tinta); }
+.tour-cab { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-top: var(--hair); padding-top: 10px; margin-bottom: 18px; }
+.tour-cab button { background: none; border: 0; padding: 0 0 3px; cursor: pointer; color: inherit; font: inherit; }
+.tour-marco { position: relative; aspect-ratio: 4 / 5; }
+.tour-marco:hover > img { transform: scale(1.02); }
 .tour-marco iframe { width: 100%; height: 100%; border: 0; display: block; }
-.vidrio {
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,.14) 0 1px, rgba(255,255,255,0) 1px 14px, rgba(0,0,0,.08) 14px 16px, rgba(255,255,255,.05) 16px 22px);
-  -webkit-backdrop-filter: blur(7px) saturate(.9); backdrop-filter: blur(7px) saturate(.9);
-  transition: opacity var(--t) var(--ease);
-}
-.tour-marco:hover .vidrio { opacity: .6; }
-.tour-boton {
-  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-  background: none; border: 0; cursor: pointer; color: var(--hueso); text-decoration: none;
-}
-.tour-360 { font-size: clamp(96px, 34vw, 240px); text-transform: none; }
 
 .luz { margin-top: var(--seccion); }
 .luz-grid { display: grid; }
@@ -247,7 +238,6 @@ figcaption, .pie-foto { margin-top: 10px; }
 .incluye-lista li { display: grid; grid-template-columns: 1.6rem 1fr; padding: 10px 0; border-bottom: var(--hair); font-size: 15px; }
 .incluye-lista li::before { content: "+"; color: var(--gris); }
 .nada-aparte { font-size: clamp(48px, 13vw, 88px); margin-top: 28px; }
-.nada-aparte::after { content: "."; color: var(--azul); }
 
 .condiciones { list-style: none; padding: 0; margin-top: 40px; display: grid; gap: 8px; max-width: 60ch; text-transform: none; letter-spacing: .02em; font-size: 11.5px; line-height: 1.6; }
 .condiciones li::before { content: "— "; }
@@ -357,7 +347,6 @@ figcaption, .pie-foto { margin-top: 10px; }
   .plano-bloque { grid-template-columns: 5fr 1fr 6fr; gap: var(--gutter); align-items: end; }
   .plano-bloque > div { grid-column: 3; }
   .tour-marco { aspect-ratio: 16 / 9; }
-  .tour-360 { font-size: clamp(120px, 18vw, 240px); }
   .luz-grid { grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
   .luz-grid > div { border-bottom: 0; border-top: var(--hair); }
   .lista-col { columns: 2; column-gap: 48px; }
@@ -399,3 +388,6 @@ figcaption, .pie-foto { margin-top: 10px; }
 .lista li .nota-mini { grid-column: 2; }
 .luz-grid .luz-hora { color: var(--tinta); }
 .evento { align-items: start; }
+.tour-cab { flex-direction: column; align-items: flex-start; gap: 10px; }
+.tour-cab button { white-space: nowrap; }
+@media (min-width: 760px) { .tour-cab { flex-direction: row; align-items: baseline; } }
