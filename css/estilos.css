@@ -768,3 +768,5 @@ html.cursor-propio:has(dialog[open]), html.cursor-propio:has(dialog[open]) * { c
 @media (min-width: 760px) and (max-width: 1099px) {
   .g-cards { grid-template-columns: repeat(3, 1fr); }
 }
+
+.ev-teaser-vacia { display: grid; place-items: center; text-decoration: none; border: var(--hair); background: var(--niebla); }
