@@ -23,4 +23,7 @@ Con GitHub Pages activado: https://nadiaberendorf-coder.github.io/pimenta-web/
 - Plano con medidas exactas (hoy están las aproximadas que pasó Nadia, sobre el plano del arquitecto).
 - Logos de las marcas para la franja "Produjeron acá" (hoy van los nombres en una grilla; con los archivos se reemplazan por `<img>`).
 - Reelegir todas las fotos, sección por sección, con más detalle (pedido de Nadia).
+- Sacar fotos de recepción, cocina, privado y balcones para que también aparezcan en el plano (recordatorio en Calendar 14/10).
+- Eventos: versión con más venta y un bloque por tipo de evento (propuesta pendiente de aprobar).
+- Nombres reales para los 4 mensajes de WhatsApp de la sección Opiniones (hoy dicen Leonel, Clienta, Producción, Marca).
 - Eventos: faltan las fotos de eventos reales (Nadia las pasa). Hoy van fotos del estudio como relleno.
