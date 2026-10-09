@@ -106,30 +106,41 @@
     cal.classList.add("calendly--activo");
   }
 
-  /* --- Tour 360°: se carga recién cuando lo tocan, para que la web sea rápida --- */
+  /* --- Tour 360°: se carga recién cuando lo piden, para que la web sea rápida --- */
   var tourBoton = document.getElementById("tour-boton");
-  if (tourBoton && d.tour360 && window.PIMENTA_VISTA_PREVIA) {
-    // en la vista previa de Claude el tour se abre en otra pestaña
-    var a = document.createElement("a");
-    a.className = tourBoton.className; a.innerHTML = tourBoton.innerHTML;
-    a.href = d.tour360; a.target = "_blank"; a.rel = "noopener";
-    tourBoton.replaceWith(a);
-  } else if (tourBoton && d.tour360) {
-    tourBoton.addEventListener("click", function () {
-      var f = document.createElement("iframe");
-      f.src = d.tour360;
-      f.title = "Tour virtual 360° de PIMENTA Estudios";
-      f.allow = "xr-spatial-tracking; gyroscope; accelerometer; fullscreen";
-      f.allowFullscreen = true;
-      var marco = document.getElementById("tour-marco");
-      marco.innerHTML = "";
-      marco.classList.add("tour-marco--activo");
-      marco.appendChild(f);
-      tourBoton.textContent = "Abrir en pantalla completa ↗";
-      tourBoton.onclick = function () { window.open(d.tour360, "_blank"); };
+  var tourAbierto = false;
+  function abrirTour() {
+    if (!d.tour360) return;
+    if (window.PIMENTA_VISTA_PREVIA) { window.open(d.tour360, "_blank"); return; }
+    if (tourAbierto) { window.open(d.tour360, "_blank"); return; }
+    var f = document.createElement("iframe");
+    f.src = d.tour360;
+    f.title = "Tour virtual 360° de PIMENTA Estudios";
+    f.allow = "xr-spatial-tracking; gyroscope; accelerometer; fullscreen";
+    f.allowFullscreen = true;
+    var marco = document.getElementById("tour-marco");
+    marco.innerHTML = "";
+    marco.classList.add("tour-marco--activo");
+    marco.appendChild(f);
+    tourAbierto = true;
+    if (tourBoton) tourBoton.textContent = "Abrir en pantalla completa ↗";
+  }
+  if (tourBoton && d.tour360) {
+    tourBoton.addEventListener("click", abrirTour);
+    var paradas = document.getElementById("paradas");
+    if (paradas) { paradas.style.cursor = "pointer"; paradas.addEventListener("click", abrirTour); }
+    // accesos al tour desde otras partes de la web
+    document.querySelectorAll("[data-tour]").forEach(function (a) {
+      if (window.PIMENTA_VISTA_PREVIA) { a.href = d.tour360; a.target = "_blank"; a.rel = "noopener"; return; }
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("tour").scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(abrirTour, 600);
+      });
     });
   } else if (tourBoton) {
     document.getElementById("tour").hidden = true;
+    document.querySelectorAll("[data-tour]").forEach(function (a) { a.remove(); });
   }
 
   /* --- Pestañas de "Todo incluido" --- */

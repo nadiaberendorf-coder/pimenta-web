@@ -469,3 +469,34 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
   .citas .cita:nth-child(2) { margin-top: 0; }
   .citas .cita:nth-child(2) { grid-column: 9 / 13; margin-top: 120px; }
 }
+
+/* ---------- 360°: botón ancho y accesos ---------- */
+.btn-ancho { width: 100%; min-height: 60px; font-size: 12px; margin-top: 22px; }
+.ficha-tour { margin-top: 14px; }
+.tour-cab .gris { color: var(--gris); }
+@media (min-width: 760px) { .btn-ancho { width: auto; min-width: 420px; } }
+
+/* ---------- Reseñas estilo Google ---------- */
+.g-cab { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; padding: 14px 0 18px; border-top: 1px solid var(--tinta); margin-bottom: 20px; }
+.g-puntaje { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.g-logo { width: 22px; height: 22px; flex: 0 0 auto; }
+.g-num { font-family: var(--f-sans); font-weight: 500; font-size: 44px; letter-spacing: -0.04em; line-height: 1; }
+.g-stars { color: #FBBC04; font-size: 15px; letter-spacing: .05em; line-height: 1; }
+.g-stars-grande { font-size: 22px; }
+.g-meta { font-family: var(--f-sans); font-size: 14px; color: #5f6368; }
+.g-cards { list-style: none; padding: 0 var(--margen) 6px; margin: 0 calc(var(--margen) * -1); display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.g-cards::-webkit-scrollbar { display: none; }
+.g-card { flex: 0 0 280px; scroll-snap-align: start; background: #f1f3f4; border-radius: 8px; padding: 16px; display: grid; gap: 8px; align-content: start; font-family: var(--f-sans); }
+.g-top { display: grid; grid-template-columns: 36px 1fr 20px; gap: 10px; align-items: center; }
+.g-top .g-logo { width: 20px; height: 20px; }
+.g-avatar { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 500; font-size: 15px; }
+.g-name { font-size: 14px; font-weight: 500; line-height: 1.2; color: #202124; }
+.g-when { font-size: 12px; color: #5f6368; line-height: 1.2; }
+.g-text { font-size: 13.5px; line-height: 1.4; color: #3c4043; }
+.g-src { font-size: 11px; color: #5f6368; }
+.g-ayuda { margin-top: 10px; }
+@media (min-width: 760px) {
+  .g-cards { margin: 0; padding: 0 0 6px; }
+  .g-card { flex: 0 0 300px; }
+  .g-ayuda { display: none; }
+}
