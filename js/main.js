@@ -127,6 +127,8 @@
   }
   if (tourBoton && d.tour360) {
     tourBoton.addEventListener("click", abrirTour);
+    // si llegan desde otra página con #tour, se abre solo
+    if (location.hash === "#tour" && !window.PIMENTA_VISTA_PREVIA) setTimeout(abrirTour, 900);
     var paradas = document.getElementById("paradas");
     if (paradas) { paradas.style.cursor = "pointer"; paradas.addEventListener("click", abrirTour); }
     // accesos al tour desde otras partes de la web
@@ -307,6 +309,33 @@
       aro.style.transform = "translate(" + ax.toFixed(1) + "px," + ay.toFixed(1) + "px)";
       requestAnimationFrame(seguir);
     })();
+  }
+
+  /* --- Plano: al pasar el mouse (o tocar) un ambiente, aparece su foto unos segundos --- */
+  var planoFoto = document.getElementById("plano-foto");
+  if (planoFoto) {
+    var pfImg = planoFoto.querySelector("img"), pfPie = planoFoto.querySelector(".plano-foto-pie"), pfTimer, pfFuera;
+    var figura = planoFoto.parentNode;
+    var mostrarFoto = function (g, segundos) {
+      clearTimeout(pfTimer); clearTimeout(pfFuera);
+      var src = g.getAttribute("data-foto");
+      if (pfImg.getAttribute("src") !== src) { pfImg.src = src; pfImg.alt = g.getAttribute("data-nombre"); }
+      pfPie.textContent = g.getAttribute("data-nombre");
+      // se acomoda del lado contrario al ambiente, para no taparlo
+      var rf = figura.getBoundingClientRect(), rg = g.getBoundingClientRect();
+      var cx = (rg.left + rg.width / 2 - rf.left) / rf.width, cy = (rg.top + rg.height / 2 - rf.top) / rf.height;
+      planoFoto.style.left = cx < .5 ? "auto" : "28px"; planoFoto.style.right = cx < .5 ? "28px" : "auto";
+      planoFoto.style.top = cy < .5 ? "auto" : "28px"; planoFoto.style.bottom = cy < .5 ? "72px" : "auto";
+      planoFoto.hidden = false;
+      requestAnimationFrame(function () { planoFoto.classList.add("plano-foto--visible"); });
+      if (segundos) pfTimer = setTimeout(esconderFoto, segundos * 1000);
+    };
+    var esconderFoto = function () { planoFoto.classList.remove("plano-foto--visible"); };
+    document.querySelectorAll(".p-amb[data-foto]").forEach(function (g) {
+      g.addEventListener("mouseenter", function () { mostrarFoto(g, 0); });
+      g.addEventListener("mouseleave", function () { pfFuera = setTimeout(esconderFoto, 250); });
+      g.addEventListener("click", function () { mostrarFoto(g, 3.5); });
+    });
   }
 
   /* --- Año del pie --- */
