@@ -612,8 +612,9 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 .marcas-lista { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); border-top: var(--hair); border-left: var(--hair); }
 .marcas-lista li { display: grid; place-items: center; text-align: center; min-height: 64px; padding: 12px 10px; border-right: var(--hair); border-bottom: var(--hair); font-family: var(--f-sans); font-weight: 500; font-size: 15px; letter-spacing: -0.02em; line-height: 1.15; transition: background-color var(--t) var(--ease); }
 .marcas-lista li:hover { background: var(--hueso); }
-.marcas-lista img { max-height: 36px; width: auto; max-width: 80%; filter: grayscale(1); opacity: .85; transition: filter var(--t) var(--ease), opacity var(--t) var(--ease); }
-.marcas-lista li:hover img { filter: none; opacity: 1; }
+.marcas-lista img { max-height: 40px; max-width: 68%; width: auto; height: auto; opacity: .72; transition: opacity var(--t) var(--ease), transform .8s var(--ease); }
+.marcas-lista li:hover img { opacity: 1; transform: scale(1.04); }
+.marcas-lista li { min-height: 84px; }
 .marcas .indice + .marcas-lista + .indice { margin-top: 10px; }
 @media (min-width: 760px) {
   .marcas { grid-template-columns: 2fr 10fr; column-gap: var(--gutter); row-gap: 24px; align-items: start; margin-bottom: 56px; }
