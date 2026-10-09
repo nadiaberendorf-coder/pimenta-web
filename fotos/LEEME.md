@@ -4,11 +4,11 @@ Las fotos salieron del PDF de PIMENTA y ya están achicadas para que carguen rá
 
 | Archivo | Dónde aparece |
 |---|---|
-| `portada.jpg` | Foto grande de arriba |
-| `espacio-escritorio.jpg` | Foto chica de la portada (en compu) |
+| `portada-ventanal.jpg`, `espacio-escritorio.jpg`, `espacio-2.jpg`, `espacio-1.jpg`, `espacio-infinito.jpg` | Las 5 fotos del collage de la portada |
+| `portada.jpg` | Ya no se usa (quedó guardada por si la querés de vuelta) |
 | `compartir.jpg` | Vista previa al compartir el link por WhatsApp o Instagram (1200 × 630) |
-| `espacio-ventanal.jpg`, `espacio-2.jpg` | Espacio I y Espacio II |
-| `espacio-1.jpg` | Bloque "La luz" |
+| `espacio-ventanal.jpg`, `espacio-1-tiro.jpg` | Espacio I (dos fotos) |
+| `espacio-2.jpg`, `espacio-2-infinito.jpg` | Espacio II (dos fotos) |
 | `produccion-1.jpg` a `produccion-12.jpg` | Galería de producciones |
 
 **Para cambiar una foto:** subí la nueva con el MISMO nombre y reemplazá la anterior.

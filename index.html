@@ -52,9 +52,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="fotos/portada.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="fotos/portada-ventanal.jpg">
   <link rel="stylesheet" href="css/estilos.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
@@ -62,7 +63,7 @@
 
 <!-- ===================== BARRA ===================== -->
 <header class="barra">
-  <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">Pimenta<span class="nota">°</span></a>
+  <a class="logo" href="#inicio" aria-label="PIMENTA Estudios, ir al inicio">PIMENTA<span class="nota">°</span></a>
   <nav class="nav" aria-label="Secciones">
     <a href="#estudio">Estudio</a>
     <a href="#tarifas">Tarifas</a>
@@ -97,17 +98,55 @@
 
 <!-- ===================== PORTADA ===================== -->
 <section id="inicio" class="hero">
-  <img class="hero-foto" src="fotos/portada.jpg" alt="Espacio de PIMENTA Estudios con ventanales altos, piso de madera y sol entrando por la mañana" fetchpriority="high">
-  <div class="hero-esquinas" aria-hidden="true">
-    <span>(01) — Estudio</span>
-    <span>Av. Callao 194 · Congreso</span>
-    <span>Luz natural · 365 días</span>
-    <span>2026/10</span>
+  <div class="hero-stage">
+    <h1 class="hero-palabras">
+      <span class="oculto">PIMENTA Estudios: alquiler de estudio fotográfico de luz natural en Congreso, CABA</span>
+      <span class="l l1" aria-hidden="true"><span class="w">Estudio</span></span>
+      <span class="l l2" aria-hidden="true"><span class="w">de <em>luz</em></span></span>
+      <span class="l l3" aria-hidden="true"><span class="w">natural</span></span>
+      <span class="l l4" aria-hidden="true"><span class="w">PIMENTA<span class="grado">°</span></span></span>
+    </h1>
+
+    <figure class="hf hf1">
+      <span class="hf-img"><img src="fotos/portada-ventanal.jpg" alt="Ventanal en arco del estudio con una mesa redonda y sillas, con sol de mañana" fetchpriority="high" width="640" height="1137"></span>
+      <figcaption>001 — Luz de mañana.</figcaption>
+    </figure>
+    <figure class="hf hf2">
+      <span class="hf-img"><img src="fotos/espacio-escritorio.jpg" alt="Escritorio junto a la ventana del estudio con luz de tarde" loading="lazy" width="750" height="1000"></span>
+      <figcaption>002</figcaption>
+    </figure>
+
+    <span class="hero-nota n0">(01) Luz natural, 365 días <b>—</b> Av. Callao 194, Congreso.</span>
+    <span class="hero-nota n1">(01) Luz natural, 365 días.</span>
+    <span class="hero-nota n2">(02)<br>Av. Callao 194,<br>Congreso.</span>
+
+    <div class="hero-tira">
+      <figure class="hf hf3">
+        <span class="hf-img"><img src="fotos/espacio-2.jpg" alt="Espacio II: sillón modular beige, alfombra de pelo largo y sillas Wassily" width="563" height="1000"></span>
+        <figcaption>003 — Espacio II.</figcaption>
+      </figure>
+      <figure class="hf hf5">
+        <span class="hf-img"><img src="fotos/espacio-1.jpg" alt="Sala principal del estudio: piso de pinotea y techos de 4,5 metros" width="900" height="1200"></span>
+        <figcaption>004 — Pinotea, 4,5 m.</figcaption>
+      </figure>
+      <figure class="hf hf4">
+        <span class="hf-img"><img src="fotos/espacio-infinito.jpg" alt="El infinito y las luces del Espacio II" width="600" height="800"></span>
+        <figcaption>005 — Infinito.</figcaption>
+      </figure>
+    </div>
+
+    <p class="hero-bajada">Estudio fotográfico en alquiler en un edificio antiguo de Congreso: 150 m², techos de 4,5 m, piso de pinotea y ventanales en arco. <span>Todo incluido, una sola tarifa.</span></p>
+
+    <a class="hero-cta" href="#reservar">Reservar un día<span class="fl">→</span></a>
+
+    <span class="hero-vertical" aria-hidden="true">Estudio fotográfico en alquiler — Congreso, Buenos Aires</span>
   </div>
-  <h1 class="hero-marca">
-    <span class="oculto">PIMENTA Estudios: alquiler de estudio fotográfico en Congreso, CABA</span>
-    <span class="letras" aria-hidden="true"><span>P</span><span>I</span><span>M</span><span>E</span><span>N</span><span>T</span><span>A</span></span>
-  </h1>
+  <div class="hero-pie">
+    <span class="p1">Buenos Aires — <span id="hero-fecha">2026/10</span></span>
+    <span class="p2">150 m² · 4,5 m de altura · 10 m de tiro</span>
+    <span class="p3">Todo incluido, una sola tarifa</span>
+    <a class="p4" href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" data-link="google"><b>4,9</b> en Google ↗</a>
+  </div>
 </section>
 
 <!-- Presentación -->
@@ -143,7 +182,10 @@
 
   <div class="fichas">
     <article class="ficha">
-      <figure class="foto"><img src="fotos/espacio-ventanal.jpg" alt="Espacio I: ventanal en arco con mesa Tulip blanca y sillas" loading="lazy"></figure>
+      <div class="fotos">
+        <figure class="foto"><img src="fotos/espacio-ventanal.jpg" alt="Espacio I: ventanal en arco con mesa Tulip blanca y sillas" loading="lazy"></figure>
+        <figure class="foto foto-b"><img src="fotos/espacio-1-tiro.jpg" alt="Espacio I: el tiro de 10 metros visto desde la puerta, con los ventanales al fondo" loading="lazy"></figure>
+      </div>
       <div class="ficha-datos">
         <h3>Espacio I <span>(01)</span></h3>
         <dl>
@@ -156,7 +198,10 @@
       </div>
     </article>
     <article class="ficha">
-      <figure class="foto"><img src="fotos/espacio-2.jpg" alt="Espacio II: sillón modular beige, alfombra de pelo largo y sillas Wassily" loading="lazy"></figure>
+      <div class="fotos">
+        <figure class="foto"><img src="fotos/espacio-2.jpg" alt="Espacio II: sillón modular beige, alfombra de pelo largo y sillas Wassily" loading="lazy"></figure>
+        <figure class="foto foto-b"><img src="fotos/espacio-2-infinito.jpg" alt="Espacio II: el infinito con las luces armadas y el balcón al fondo" loading="lazy"></figure>
+      </div>
       <div class="ficha-datos">
         <h3>Espacio II <span>(02)</span></h3>
         <dl>
@@ -391,12 +436,14 @@
 <section id="galeria" class="seccion piedra">
   <header class="cab">
     <p class="indice">(05) — Producciones · 1/12</p>
-    <h2>Hecho <em>en</em> Pimenta<span class="nota">.</span></h2>
+    <h2>Hecho <em>en</em> PIMENTA<span class="nota">.</span></h2>
     <p class="cab-texto">Retratos, moda, campañas y contenido de marcas producidos en el estudio.</p>
   </header>
   <div class="marcas">
     <p class="indice">[ Produjeron acá ]</p>
-    <ul class="marcas-lista"><li>Promesse</li><li>María Becerra</li><li>Cinemark</li><li>Calm es Simple</li><li>Cuesta Blanca</li></ul>
+    <ul class="marcas-lista"><li>María Becerra</li><li>Wella</li><li>COTO</li><li>La Nación Revista</li><li>Cinemark</li><li>RE/MAX</li><li>Promesse</li><li>Ossira</li><li>Sweet Victorian</li><li>Cuesta Blanca</li><li>City Girl</li><li>The Glow Factor</li><li>Leutthe</li><li>Limay</li><li>Calm es Simple</li></ul>
+    <p class="indice">[ Productoras ]</p>
+    <ul class="marcas-lista marcas-prod"><li>Fixer Argentina</li><li>Polenta</li><li>Communica</li><li>AB Growth Latam</li></ul>
   </div>
 
   <div class="galeria">
@@ -426,8 +473,8 @@
 <!-- ===================== 06 LO QUE DICEN ===================== -->
 <section id="opiniones" class="seccion piedra">
   <header class="cab">
-    <p class="indice">(06) — Lo que dicen</p>
-    <h2>Palabra de <em>cliente</em><span class="nota">.</span></h2>
+    <p class="indice">(06) — Opiniones</p>
+    <h2>Lo que <em>dicen</em><span class="nota">.</span></h2>
     <p class="cab-texto">Reseñas verificadas en Google y mensajes que nos llegan después de cada producción.</p>
   </header>
 
@@ -569,7 +616,7 @@
         <svg class="g-logo" viewBox="0 0 32 32" aria-hidden="true"><path fill="#25D366" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 5 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6l-.6-.3z"/></svg>
       </div>
       <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
-      <p class="g-text">Muchísimas gracias por todo, fue un placer enorme grabar en Pimenta. Sin duda alguna querremos volver.</p>
+      <p class="g-text">Muchísimas gracias por todo, fue un placer enorme grabar en PIMENTA. Sin duda alguna querremos volver.</p>
       <p class="g-src">Mensaje por WhatsApp</p>
     </li>
     <li class="g-card">
@@ -601,6 +648,58 @@
       <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
       <p class="g-text">Estoy subiendo los productos a la web y quería agradecer por el trabajo con las fotos: está hermoso.</p>
       <p class="g-src">Mensaje por WhatsApp</p>
+    </li>
+  </ul>
+  <ul class="g-cards" aria-label="Más reseñas de clientes">
+    <li class="g-card">
+      <div class="g-top">
+        <span class="g-avatar" style="background:#DB4437">N</span>
+        <div class="g-quien"><p class="g-name">Natalia K.</p><p class="g-when">4 reseñas</p></div>
+        <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+      </div>
+      <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
+      <p class="g-text">Un espacio inédito, techos altísimos, pisos de pinotea, ventanales soñados. Una nave del tiempo estallada de proyectos, una maravilla :)</p>
+      <p class="g-src">Reseña en Google</p>
+    </li>
+    <li class="g-card">
+      <div class="g-top">
+        <span class="g-avatar" style="background:#0F9D58">M</span>
+        <div class="g-quien"><p class="g-name">Manuela L.</p><p class="g-when">Local Guide · 23 reseñas</p></div>
+        <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+      </div>
+      <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
+      <p class="g-text">Uno de los espacios más bellos de la Ciudad de Buenos Aires, gestionado con mucho profesionalismo, juventud y honestidad.</p>
+      <p class="g-src">Reseña en Google</p>
+    </li>
+    <li class="g-card">
+      <div class="g-top">
+        <span class="g-avatar" style="background:#AB47BC">A</span>
+        <div class="g-quien"><p class="g-name">Amalia Z.</p><p class="g-when">Local Guide · 17 reseñas</p></div>
+        <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+      </div>
+      <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
+      <p class="g-text">Inmejorable locación. Mucha luz. Onda parisina. Muy recomendable, las chicas que atienden son divinas.</p>
+      <p class="g-src">Reseña en Google</p>
+    </li>
+    <li class="g-card">
+      <div class="g-top">
+        <span class="g-avatar" style="background:#F4B400">J</span>
+        <div class="g-quien"><p class="g-name">Juan C.</p><p class="g-when">Local Guide · 32 reseñas</p></div>
+        <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+      </div>
+      <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
+      <p class="g-text">Excelente lugar. Espacioso, luminoso, limpio. Tuvimos una jornada de trabajo impecable, todo de acuerdo a lo pautado. Lo mejor, la atención.</p>
+      <p class="g-src">Reseña en Google</p>
+    </li>
+    <li class="g-card">
+      <div class="g-top">
+        <span class="g-avatar" style="background:#4285F4">M</span>
+        <div class="g-quien"><p class="g-name">Malena S.</p><p class="g-when">3 reseñas</p></div>
+        <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+      </div>
+      <p class="g-stars" aria-label="5 estrellas">★★★★★</p>
+      <p class="g-text">El estudio es simplemente hermoso, tiene una iluminación increíble y siempre que fui me trataron de 10. Lo mejor es la vista que tienen desde los balcones.</p>
+      <p class="g-src">Reseña en Google</p>
     </li>
   </ul>
   <p class="g-ayuda indice gris">Deslizá para ver más →</p>
@@ -712,7 +811,7 @@
     </div>
   </div>
   <div class="cta-fila">
-    <p class="cta-texto">¿Otra duda? Preguntale a nuestro equipo.</p>
+    <p class="cta-texto">¿Otra duda? Escribinos, te respondemos rápido.</p>
     <div class="acciones">
       <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, tengo una consulta: " class="btn">Hablar con el equipo →</a>
       
@@ -787,19 +886,24 @@
     <h2>Hablemos<span class="nota">.</span></h2>
   </header>
   <dl class="contacto">
-    <div><dt>WhatsApp</dt><dd><a href="#contacto" data-link="whatsapp"><span data-texto="whatsapp" class="completar">[completar]</span></a></dd></div>
-    <div><dt>Instagram</dt><dd><a href="#contacto" data-link="instagram"><span data-texto="instagram" class="completar">[completar]</span></a></dd></div>
-    <div><dt>Mail</dt><dd><a href="#contacto" data-link="mail"><span data-texto="mail" class="completar">[completar]</span></a></dd></div>
-    <div><dt>Dirección</dt><dd><a href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Av. Callao 194, 2.º piso U5</a></dd></div>
+    <div><dt>WhatsApp</dt><dd><a href="#contacto" data-link="whatsapp"><span data-texto="whatsapp" class="completar">[completar]</span><span class="fl fl-ne">↗</span></a></dd></div>
+    <div><dt>Instagram</dt><dd><a href="#contacto" data-link="instagram"><span data-texto="instagram" class="completar">[completar]</span><span class="fl fl-ne">↗</span></a></dd></div>
+    <div><dt>Mail</dt><dd><a href="#contacto" data-link="mail"><span data-texto="mail" class="completar">[completar]</span><span class="fl fl-ne">↗</span></a></dd></div>
+    <div><dt>Dirección</dt><dd><a href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" target="_blank" rel="noopener">Av. Callao 194, 2.º piso U5<span class="fl fl-ne">↗</span></a></dd></div>
   </dl>
-  <a href="#reservar" class="btn btn-claro">Reservar →</a>
+  <div class="acciones">
+    <a href="#contacto" data-link="whatsapp" data-msg="¡Hola PIMENTA! Quiero hacer una consulta." class="btn btn-claro">Escribinos por WhatsApp →</a>
+    <a href="#contacto" data-link="instagram" class="btn btn-claro btn-borde">Instagram ↗</a>
+    <a href="#contacto" data-link="mail" class="btn btn-claro btn-borde">Mandar un mail ↗</a>
+    <a href="#reservar" class="btn btn-claro btn-borde">Reservar →</a>
+  </div>
 </section>
 
 </main>
 
 <footer class="pie">
   <div class="pie-datos">
-    <span>Pimenta<span class="nota">©</span><span id="anio">2026</span></span>
+    <span>PIMENTA<span class="nota">©</span><span id="anio">2026</span></span>
     <span>Alquiler de estudio fotográfico — Congreso, CABA</span>
     <a href="#tour" data-tour>[ Tour 360° ]</a>
     <a href="#inicio">[ Volver arriba ↑ ]</a>

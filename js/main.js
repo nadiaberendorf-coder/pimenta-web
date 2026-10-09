@@ -204,20 +204,50 @@
     });
   }
 
-  /* --- Portada: la foto se acomoda suave al bajar --- */
-  var hero = document.querySelector(".hero");
-  if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var pendiente = false;
-    window.addEventListener("scroll", function () {
-      if (pendiente) return;
-      pendiente = true;
-      requestAnimationFrame(function () {
-        var s = Math.min(1, window.scrollY / (hero.offsetHeight || 1));
-        hero.style.setProperty("--s", s.toFixed(3));
-        pendiente = false;
+  /* --- Portada: entra despacio cuando cargaron las tipografías --- */
+  var entrar = function () { requestAnimationFrame(function () { document.documentElement.classList.add("in"); }); };
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(entrar, entrar); }
+  else { window.addEventListener("load", entrar); }
+  setTimeout(entrar, 900);
+  var fecha = document.getElementById("hero-fecha");
+  if (fecha) { var hoy = new Date(); fecha.textContent = hoy.getFullYear() + "/" + ("0" + (hoy.getMonth() + 1)).slice(-2); }
+
+  /* --- Barra: se aclara cuando pasa por encima del bloque oscuro de contacto --- */
+  var barra = document.querySelector(".barra");
+  var oscuras = document.querySelectorAll(".oscura");
+  if (barra && oscuras.length) {
+    var ocupado = false;
+    var pintarBarra = function () {
+      var clara = false;
+      oscuras.forEach(function (s) {
+        var r = s.getBoundingClientRect();
+        if (r.top <= 40 && r.bottom >= 40) clara = true;
       });
+      barra.classList.toggle("barra--clara", clara);
+      ocupado = false;
+    };
+    window.addEventListener("scroll", function () {
+      if (ocupado) return;
+      ocupado = true;
+      requestAnimationFrame(pintarBarra);
     }, { passive: true });
+    pintarBarra();
   }
+
+  /* --- Flechas de botones y links: se separan en un span para moverse al pasar el mouse --- */
+  document.querySelectorAll(".btn, .link, .hero-cta, .pie-datos a, .hero-pie .p4, .menu a").forEach(function (el) {
+    if (el.querySelector(".fl")) return;
+    var n = el.lastChild;
+    if (!n || n.nodeType !== 3) return;
+    var m = n.nodeValue.match(/^([\s\S]*?)\s*([→↗↑])\s*([)\]])?\s*$/);
+    if (!m) return;
+    n.nodeValue = m[1] + (m[1] && !/\s$/.test(m[1]) ? " " : "");
+    var s = document.createElement("span");
+    s.className = "fl" + (m[2] === "↗" ? " fl-ne" : m[2] === "↑" ? " fl-n" : "");
+    s.textContent = m[2];
+    el.appendChild(s);
+    if (m[3]) el.appendChild(document.createTextNode(" " + m[3]));
+  });
 
   /* --- Año del pie --- */
   var anio = document.getElementById("anio");

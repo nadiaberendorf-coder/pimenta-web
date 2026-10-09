@@ -17,3 +17,4 @@ Con GitHub Pages activado: https://nadiaberendorf-coder.github.io/pimenta-web/
 ## Pendientes para más adelante (pedido de Nadia)
 - Apartado propio para **Open Studio** (feria de marcas).
 - Apartado propio para **Noches PIMENTA** (experiencia para parejas).
+- Plano nuevo del estudio con medidas de cada ambiente (Nadia pasa las medidas).
