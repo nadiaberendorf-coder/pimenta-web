@@ -784,3 +784,5 @@ html.cursor-propio:has(dialog[open]), html.cursor-propio:has(dialog[open]) * { c
   .destacados { grid-template-columns: repeat(6, 1fr); margin-bottom: 40px; }
   .destacados img { height: 88px; }
 }
+
+.destacados .cant { font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; color: var(--gris); margin-left: 3px; }
