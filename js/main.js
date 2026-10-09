@@ -169,6 +169,13 @@
       });
     });
     visor.addEventListener("click", function () { visor.close(); });
+    // las fotos de la portada también se ven en grande
+    document.querySelectorAll(".hf").forEach(function (f) {
+      f.setAttribute("role", "button"); f.tabIndex = 0; f.setAttribute("aria-label", "Ver la foto en grande");
+      var abrir = function () { var img = f.querySelector("img"); visorImg.src = img.currentSrc || img.src; visorImg.alt = img.alt; visor.showModal(); };
+      f.addEventListener("click", abrir);
+      f.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrir(); } });
+    });
   }
 
   /* --- Menú del celular --- */
@@ -248,6 +255,59 @@
     el.appendChild(s);
     if (m[3]) el.appendChild(document.createTextNode(" " + m[3]));
   });
+
+  /* --- Con mouse: la portada sigue al puntero, las fotos se inclinan y hay un cursor propio --- */
+  var conMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (conMouse && !reduce) {
+    // portada: las fotos y las palabras se corren apenas según dónde está el mouse
+    var stage = document.querySelector(".hero-stage");
+    var heroVisible = true;
+    if (stage && "IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) { heroVisible = es[0].isIntersecting; }).observe(stage);
+    }
+    if (stage) {
+      window.addEventListener("mousemove", function (e) {
+        if (!heroVisible) return;
+        stage.style.setProperty("--mx", (e.clientX / window.innerWidth - .5).toFixed(3));
+        stage.style.setProperty("--my", (e.clientY / window.innerHeight - .5).toFixed(3));
+      }, { passive: true });
+    }
+    // fotos que se inclinan hacia el mouse
+    document.querySelectorAll(".hf-img, .ficha .foto, .galeria button").forEach(function (el) {
+      el.addEventListener("mousemove", function (e) {
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        el.style.setProperty("--ry", (x * 7).toFixed(2) + "deg");
+        el.style.setProperty("--rx", (-y * 7).toFixed(2) + "deg");
+      }, { passive: true });
+      el.addEventListener("mouseleave", function () { el.style.setProperty("--ry", "0deg"); el.style.setProperty("--rx", "0deg"); });
+    });
+    // cursor propio: punto + el ° de PIMENTA que lo sigue con un poco de retraso
+    var cur = document.createElement("div");
+    cur.className = "cursor"; cur.setAttribute("aria-hidden", "true");
+    cur.innerHTML = '<span class="cursor-punto"></span><span class="cursor-aro" data-texto="+"></span>';
+    document.body.appendChild(cur);
+    document.documentElement.classList.add("cursor-propio");
+    var punto = cur.firstChild, aro = cur.lastChild, mx = -100, my = -100, ax = -100, ay = -100;
+    document.addEventListener("mousemove", function (e) {
+      mx = e.clientX; my = e.clientY;
+      punto.style.transform = "translate(" + mx + "px," + my + "px)";
+      cur.classList.add("cursor--visible");
+      var t = e.target;
+      var sobre = t.closest ? t.closest("a, button, summary, [role=tab], [role=button], .galeria figure, .paradas li, .g-card, .marcas-lista li, .p-amb") : null;
+      var foto = t.closest ? t.closest(".galeria figure, .hf, .paradas li") : null;
+      cur.classList.toggle("cursor--sobre", !!sobre);
+      cur.classList.toggle("cursor--foto", !!foto);
+      cur.classList.toggle("cursor--oculto", t.tagName === "IFRAME");
+      if (foto) aro.setAttribute("data-texto", foto.closest(".paradas") ? "360°" : "+");
+    }, { passive: true });
+    document.documentElement.addEventListener("mouseleave", function () { cur.classList.remove("cursor--visible"); });
+    (function seguir() {
+      ax += (mx - ax) * .16; ay += (my - ay) * .16;
+      aro.style.transform = "translate(" + ax.toFixed(1) + "px," + ay.toFixed(1) + "px)";
+      requestAnimationFrame(seguir);
+    })();
+  }
 
   /* --- Año del pie --- */
   var anio = document.getElementById("anio");
