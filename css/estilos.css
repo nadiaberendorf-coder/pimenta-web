@@ -500,3 +500,11 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
   .g-card { flex: 0 0 300px; }
   .g-ayuda { display: none; }
 }
+
+/* ---------- Marcas que produjeron en PIMENTA ---------- */
+.marcas { display: grid; gap: 14px; padding: 14px 0 22px; border-top: var(--hair); margin-bottom: 40px; }
+.marcas-lista { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 32px; }
+.marcas-lista li { font-family: var(--f-sans); font-weight: 500; font-size: clamp(20px, 3vw, 30px); letter-spacing: -0.035em; line-height: 1.1; }
+@media (min-width: 760px) {
+  .marcas { grid-template-columns: 2fr 10fr; column-gap: var(--gutter); align-items: baseline; margin-bottom: 56px; }
+}
