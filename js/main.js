@@ -29,6 +29,10 @@
   // Links: si el dato está cargado, el link apunta ahí; si no, lleva a Contacto
   document.querySelectorAll("[data-link]").forEach(function (el) {
     var url = links[el.getAttribute("data-link")];
+    // mensaje de WhatsApp distinto según desde dónde escriben
+    if (url && el.getAttribute("data-link") === "whatsapp" && el.getAttribute("data-msg")) {
+      url = "https://wa.me/" + d.whatsapp.replace(/\D/g, "") + "?text=" + encodeURIComponent(el.getAttribute("data-msg"));
+    }
     if (url) {
       el.href = url;
       if (url.indexOf("http") === 0) { el.target = "_blank"; el.rel = "noopener"; }
@@ -115,7 +119,10 @@
       f.allowFullscreen = true;
       var marco = document.getElementById("tour-marco");
       marco.innerHTML = "";
+      marco.classList.add("tour-marco--activo");
       marco.appendChild(f);
+      tourBoton.textContent = "Abrir en pantalla completa ↗";
+      tourBoton.onclick = function () { window.open(d.tour360, "_blank"); };
     });
   } else if (tourBoton) {
     document.getElementById("tour").hidden = true;

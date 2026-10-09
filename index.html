@@ -187,13 +187,20 @@
 
   <div class="tour" id="tour">
     <div class="tour-cab">
-      <p class="indice">[ Tour virtual 360° ]</p>
-      <button type="button" id="tour-boton" class="link">Recorrer el estudio ↗</button>
+      <p class="indice">[ Recorrido · 5 paradas ]</p>
+      <button type="button" id="tour-boton" class="link">Recorrer en 360° ↗</button>
     </div>
     <div class="tour-marco" id="tour-marco">
-      <img src="fotos/espacio-infinito.jpg" alt="Espacio II con el infinito, luces y estantería" loading="lazy">
+      <p class="tour-grados" aria-hidden="true">360°</p>
+      <ol class="paradas">
+        <li><figure><img src="fotos/espacio-ventanal.jpg" alt="Parada 1: el ventanal en arco del Espacio I" loading="lazy"><figcaption>(01) Ventanal</figcaption></figure></li>
+        <li><figure><img src="fotos/espacio-escritorio.jpg" alt="Parada 2: escritorio junto a la ventana con luz de tarde" loading="lazy"><figcaption>(02) Escritorio</figcaption></figure></li>
+        <li><figure><img src="fotos/espacio-1.jpg" alt="Parada 3: vista general del Espacio I con piso de pinotea" loading="lazy"><figcaption>(03) Espacio I</figcaption></figure></li>
+        <li><figure><img src="fotos/espacio-infinito.jpg" alt="Parada 4: el infinito y las luces del Espacio II" loading="lazy"><figcaption>(04) Infinito</figcaption></figure></li>
+        <li><figure><img src="fotos/espacio-2.jpg" alt="Parada 5: sillón modular y sillas Wassily del Espacio II" loading="lazy"><figcaption>(05) Sillón</figcaption></figure></li>
+      </ol>
     </div>
-    <p class="pie-foto">Los dos espacios, el hall y los balcones, en 360°</p>
+    <p class="pie-foto">Movete por los dos espacios, el hall y los balcones como si estuvieras ahí.</p>
   </div>
 
   <div class="luz">
@@ -202,6 +209,13 @@
       <div><p class="luz-hora">Mañana</p><p>Sol directo y el mayor ingreso de luz.</p></div>
       <div><p class="luz-hora">Mediodía</p><p>Todavía entra un poco de sol.</p></div>
       <div><p class="luz-hora">Desde 13 h</p><p>Mucha luz natural pareja hasta que se esconde el sol.</p></div>
+    </div>
+  </div>
+  <div class="cta-fila">
+    <p class="cta-texto">¿Querés verlo en persona? Agendá una visita o escribinos.</p>
+    <div class="acciones">
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero conocer el estudio." class="btn">Hablar con el equipo →</a>
+      <a href="#contacto" data-link="visita" class="link">Agendar visita ↗</a>
     </div>
   </div>
 </section>
@@ -321,6 +335,13 @@
     <p class="evento-texto">¿Evento o más de 10 personas? Lanzamientos, showrooms, cenas y talleres con presupuesto a medida.</p>
     <a href="#eventos" class="link">Ver eventos ↗</a>
   </div>
+  <div class="cta-fila">
+    <p class="cta-texto">¿Dudas con la tarifa o la fecha? Te respondemos por WhatsApp.</p>
+    <div class="acciones">
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero consultar por una fecha y la tarifa." class="btn">Hablar con el equipo →</a>
+      <a href="#reservar" class="link">Reservar online ↗</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== 04 SERVICIO DE FOTOGRAFÍA ===================== -->
@@ -353,7 +374,7 @@
         <div><dt>Precio</dt><dd><span class="completar">[completar: precio desde o paquetes]</span></dd></div>
       </dl>
       <div class="acciones">
-        <a href="#contacto" data-link="whatsapp" class="btn">Pedir presupuesto →</a>
+        <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero un presupuesto del servicio de fotografía." class="btn">Pedir presupuesto →</a>
         <a href="#contacto" data-link="reunion" class="link">Reunión de 15 min ↗</a>
       </div>
     </div>
@@ -382,6 +403,13 @@
     <figure><button type="button" aria-label="Ver foto 12 en grande"><img src="fotos/produccion-12.jpg" alt="Foto en blanco y negro de mujer embarazada con tela blanca en el balcón" loading="lazy"></button><figcaption>(12) — Maternidad — balcón</figcaption></figure>
   </div>
   <a href="#contacto" data-link="instagram" class="link link-centro">Más en Instagram <span data-texto="instagram">@pimentaestudios</span> ↗</a>
+  <div class="cta-fila">
+    <p class="cta-texto">Tu próxima producción, acá.</p>
+    <div class="acciones">
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero reservar el estudio para una producción." class="btn">Hablar con el equipo →</a>
+      <a href="#reservar" class="link">Reservar online ↗</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== 06 LO QUE DICEN ===================== -->
@@ -420,6 +448,13 @@
       <p class="cita-de">(05) — Alquiler del estudio</p>
     </li>
   </ol>
+  <div class="cta-fila">
+    <p class="cta-texto">Sumate a la lista. Reservá tu fecha.</p>
+    <div class="acciones">
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero reservar una fecha." class="btn">Hablar con el equipo →</a>
+      <a href="#reservar" class="link">Reservar online ↗</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== 07 EVENTOS ===================== -->
@@ -453,12 +488,19 @@
         <div><dt>Precio</dt><dd>Presupuesto a medida según horas, personas y servicios.</dd></div>
       </dl>
       <div class="acciones">
-        <a href="#contacto" data-link="whatsapp" class="btn">Pedir presupuesto →</a>
+        <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero hacer un evento en el estudio." class="btn">Pedir presupuesto →</a>
         <a href="#contacto" data-link="visita" class="link">Agendar visita ↗</a>
       </div>
     </div>
   </div>
   <p class="condiciones-linea">Música moderada y volumen amable con los vecinos: es un espacio de encuentro, no un boliche.</p>
+  <div class="cta-fila">
+    <p class="cta-texto">Contanos tu evento y te armamos el presupuesto.</p>
+    <div class="acciones">
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero hacer un evento. Les cuento: " class="btn">Hablar con el equipo →</a>
+      <a href="#contacto" data-link="visita" class="link">Agendar visita ↗</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== 08 RESERVAR ===================== -->
@@ -488,7 +530,7 @@
 
   <div id="calendly" class="calendly">
     <p><span class="completar">[completar link de Calendly]</span></p>
-    <a href="#contacto" data-link="whatsapp" class="btn">Consultar disponibilidad →</a>
+    <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero consultar disponibilidad para reservar." class="btn">Consultar disponibilidad →</a>
   </div>
 
   <div class="visita">
@@ -549,6 +591,13 @@
         <summary>¿Piden depósito en garantía?</summary>
         <p>No para producciones. Al empezar la jornada se firma un contrato de uso del espacio, y la persona responsable de la reserva responde por roturas o daños.</p>
       </details>
+    </div>
+  </div>
+  <div class="cta-fila">
+    <p class="cta-texto">¿Otra duda? Preguntale a nuestro equipo.</p>
+    <div class="acciones">
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, tengo una consulta: " class="btn">Hablar con el equipo →</a>
+      
     </div>
   </div>
 </section>
