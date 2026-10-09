@@ -17,13 +17,15 @@ Web de una sola página para PIMENTA Estudios (alquiler de estudio fotográfico 
 
 Con GitHub Pages activado: https://nadiaberendorf-coder.github.io/pimenta-web/
 
-## Pendientes para más adelante (pedido de Nadia)
-- Apartado propio para **Open Studio** (feria de marcas).
-- Apartado propio para **Noches PIMENTA** (experiencia para parejas).
-- Plano con medidas exactas (hoy están las aproximadas que pasó Nadia, sobre el plano del arquitecto).
-- Logos de las marcas para la franja "Produjeron acá" (hoy van los nombres en una grilla; con los archivos se reemplazan por `<img>`).
-- Reelegir todas las fotos, sección por sección, con más detalle (pedido de Nadia).
-- Sacar fotos de recepción, cocina, privado y balcones para que también aparezcan en el plano (recordatorio en Calendar 14/10).
-- Eventos: versión con más venta y un bloque por tipo de evento (propuesta pendiente de aprobar).
-- Nombres reales para los 4 mensajes de WhatsApp de la sección Opiniones (hoy dicen Leonel, Clienta, Producción, Marca).
-- Eventos: faltan las fotos de eventos reales (Nadia las pasa). Hoy van fotos del estudio como relleno.
+## Pendientes (en el orden que pidió Nadia)
+1. Correcciones de diseño y fotos de la página principal (Nadia manda más; galería: cambiar algunas fotos).
+2. Mobiliario: propuesta de cómo mostrar fotos del mobiliario y los equipos en "Todo incluido" (las fotos de producto están en el PDF de la web vieja).
+3. Revisión celular, sección por sección.
+4. Eventos: armar la página completa (propuesta v2: más venta, un bloque por tipo). Nadia pidió fotos de eventos a 4 personas que hicieron eventos: hacer seguimiento.
+5. Logos de las marcas: los busca Claude en internet (hace falta habilitar internet en el entorno de la sesión) o Nadia sube archivos.
+6. Dominio (comprado en Canva): registros DNS → GitHub Pages.
+7. Publicar: Settings → Pages → Source "GitHub Actions" (2 clics de Nadia) y disparar la publicación.
+8. Rutina automática de precios mensual: definir planilla, día y hora, después de publicar.
+9. Fotos de recepción, cocina, privado y balcones (Nadia ya se agendó sacarlas).
+10. Nombres reales para testimonios de WhatsApp si se vuelven a usar (hoy la web muestra solo 10 reseñas de Google).
+11. Más adelante: sección propia para Noches PIMENTA. (Open Studio no existe más.)

@@ -67,8 +67,8 @@
         '<td>' + (ahorro > 0 ? '<span class="t-lista">Lista ' + plata(lista) + '</span>' : '') +
           '<span class="t-web">' + plata(t.web) + '</span>' +
           (ahorro > 0 ? '<span class="t-ahorro">Ahorrás ' + plata(ahorro) + '</span>' : '') +
+          (t.horas > 1 ? '<span class="t-hora-eq">Te sale ' + plata(t.web / t.horas) + ' la hora</span>' : '') +
           (i === mejor ? '<span class="t-mejor">Mejor precio por hora</span>' : '') + '</td>' +
-        '<td class="t-hora col-hora">' + plata(t.web / t.horas) + ' / h</td>' +
       '</tr>';
     }).join("");
   }
@@ -309,28 +309,6 @@
       aro.style.transform = "translate(" + ax.toFixed(1) + "px," + ay.toFixed(1) + "px)";
       requestAnimationFrame(seguir);
     })();
-  }
-
-  /* --- Plano: al pasar el mouse (o tocar) un ambiente, aparece su foto unos segundos --- */
-  var planoFoto = document.getElementById("plano-foto");
-  if (planoFoto) {
-    var pfImg = planoFoto.querySelector("img"), pfPie = planoFoto.querySelector(".plano-foto-pie"), pfTimer, pfFuera;
-    var mostrarFoto = function (g) {
-      clearTimeout(pfTimer); clearTimeout(pfFuera);
-      var src = g.getAttribute("data-foto");
-      if (pfImg.getAttribute("src") !== src) { pfImg.src = src; pfImg.alt = g.getAttribute("data-nombre"); }
-      pfPie.textContent = g.getAttribute("data-nombre");
-      planoFoto.hidden = false;
-      requestAnimationFrame(function () { planoFoto.classList.add("plano-foto--visible"); });
-      pfTimer = setTimeout(esconderFoto, 3000); // unos segundos y se va sola
-    };
-    var esconderFoto = function () { planoFoto.classList.remove("plano-foto--visible"); };
-    document.querySelectorAll(".p-amb[data-foto]").forEach(function (g) {
-      // con mouse: al entrar aparece, al salir se va; con el dedo: un toque y se queda unos segundos
-      g.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") mostrarFoto(g); });
-      g.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") pfFuera = setTimeout(esconderFoto, 400); });
-      g.addEventListener("click", function () { mostrarFoto(g); });
-    });
   }
 
   /* --- Año del pie --- */
