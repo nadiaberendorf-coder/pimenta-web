@@ -243,9 +243,9 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 .p-amb rect, .p-amb polygon { fill: rgba(226, 222, 214, 0); transition: fill var(--t) var(--ease); }
 .p-amb:hover rect, .p-amb:hover polygon { fill: var(--arena); }
 .p-amb .p-infinito { fill: var(--tinta); }
-.p-nombre { font-size: 11px; font-weight: 500; letter-spacing: .08em; fill: var(--tinta); }
-.p-grande { font-size: 16px; letter-spacing: .06em; }
-.p-medida { font-size: 9.5px; letter-spacing: .08em; fill: var(--gris); transition: fill var(--t) var(--ease); }
+.p-nombre { font-size: 11.5px; font-weight: 500; letter-spacing: .06em; fill: var(--tinta); }
+.p-grande { font-size: 18px; letter-spacing: .04em; }
+.p-medida { font-size: 9.5px; letter-spacing: .06em; fill: var(--gris); transition: fill var(--t) var(--ease); }
 .p-amb:hover .p-medida { fill: var(--azul); }
 .p-balcon .p-medida { font-size: 8.5px; }
 .p-leyenda line { stroke: var(--azul); stroke-width: 1.4; }
@@ -738,9 +738,9 @@ html.cursor-propio:has(dialog[open]), html.cursor-propio:has(dialog[open]) * { c
 
 /* ---------- Plano: foto del ambiente al pasar el mouse o tocar ---------- */
 .plano { position: relative; }
-.plano-foto { position: absolute; width: 42%; max-width: 240px; aspect-ratio: 3 / 4; overflow: hidden; background: var(--arena); z-index: 2; pointer-events: none; opacity: 0; clip-path: inset(100% 0 0 0); transition: opacity .5s var(--ease), clip-path .8s var(--ease); }
+.plano-foto { position: absolute; left: 50%; top: 46%; width: 72%; max-width: 360px; aspect-ratio: 4 / 5; transform: translate(-50%, -50%) scale(.94); overflow: hidden; background: var(--arena); z-index: 2; pointer-events: none; opacity: 0; mix-blend-mode: multiply; transition: opacity .6s var(--ease), transform 1s var(--ease); }
 .plano-foto[hidden] { display: block; }
-.plano-foto--visible { opacity: 1; clip-path: inset(0); }
+.plano-foto--visible { opacity: .9; transform: translate(-50%, -50%) scale(1); }
 .plano-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) contrast(.96); }
 .plano-foto-pie { position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 10px; background: var(--tinta); color: var(--hueso); font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .plano figcaption em { font-size: 1em; color: var(--gris); }
@@ -748,7 +748,7 @@ html.cursor-propio:has(dialog[open]), html.cursor-propio:has(dialog[open]) * { c
 
 /* ---------- Eventos: acceso en la landing y página propia ---------- */
 .ev-teaser { display: grid; gap: 28px; }
-.ev-teaser-foto { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--arena); }
+.ev-teaser-foto { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--arena); }
 .ev-teaser-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.82) contrast(.94) brightness(1.03); transition: transform 1.4s var(--ease), filter 1s var(--ease); }
 .ev-teaser-foto:hover img { transform: scale(1.04); filter: saturate(1) contrast(.97) brightness(1); }
 .ev-teaser-datos { display: grid; gap: 24px; align-content: start; }
@@ -760,7 +760,7 @@ html.cursor-propio:has(dialog[open]), html.cursor-propio:has(dialog[open]) * { c
 .ev-fotos + .pie-foto { margin-top: 10px; }
 .ev-listas { margin-top: 64px; }
 @media (min-width: 760px) {
-  .ev-teaser { grid-template-columns: 7fr 5fr; column-gap: calc(var(--gutter) * 2); align-items: end; }
+  .ev-teaser { grid-template-columns: 4fr 8fr; column-gap: calc(var(--gutter) * 2); align-items: end; }
   .ev-fotos { grid-template-columns: 2fr 1fr 1fr; align-items: end; }
   .ev-fotos .foto:first-child { grid-column: auto; aspect-ratio: 4 / 5; }
   .ev-fotos .foto:nth-child(2) { aspect-ratio: 3 / 4; }
