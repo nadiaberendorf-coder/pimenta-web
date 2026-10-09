@@ -85,6 +85,10 @@
     }
   }
 
+  // Cantidad de reseñas de Google: solo si está cargada
+  var cant = document.querySelector(".google-cant");
+  if (cant && d.googleResenas) cant.hidden = false;
+
   /* --- Calendly --- */
   var cal = document.getElementById("calendly");
   if (cal && d.calendly && window.PIMENTA_VISTA_PREVIA) {

@@ -26,7 +26,7 @@ window.PIMENTA = {
   // Link a tus reseñas de Google (el de "Escribir una reseña" o el de Maps)
   google: "https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6",
   // Puntaje y cantidad de reseñas, como aparecen en tu ficha de Google. Ejemplo: "4,9" y "150"
-  googlePuntaje: "",
+  googlePuntaje: "4,9",
   googleResenas: "",
   // Mensaje que aparece escrito cuando alguien toca el botón de WhatsApp
   mensajeWhatsapp: "¡Hola PIMENTA! Quiero consultar por el alquiler del estudio.",

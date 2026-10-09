@@ -446,3 +446,7 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
   .cta-fila { grid-template-columns: 7fr 5fr; column-gap: var(--gutter); align-items: center; margin-top: 96px; }
   .cta-fila .acciones { justify-self: end; }
 }
+
+.google-num { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+.google-estrellas { font-size: clamp(18px, 2.4vw, 28px); letter-spacing: .12em; color: var(--tinta); }
+.google-mini { color: var(--gris); }
