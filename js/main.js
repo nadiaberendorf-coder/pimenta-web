@@ -326,8 +326,9 @@
     };
     var esconderFoto = function () { planoFoto.classList.remove("plano-foto--visible"); };
     document.querySelectorAll(".p-amb[data-foto]").forEach(function (g) {
-      g.addEventListener("mouseenter", function () { mostrarFoto(g); });
-      g.addEventListener("mouseleave", function () { pfFuera = setTimeout(esconderFoto, 400); });
+      // con mouse: al entrar aparece, al salir se va; con el dedo: un toque y se queda unos segundos
+      g.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") mostrarFoto(g); });
+      g.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") pfFuera = setTimeout(esconderFoto, 400); });
       g.addEventListener("click", function () { mostrarFoto(g); });
     });
   }
