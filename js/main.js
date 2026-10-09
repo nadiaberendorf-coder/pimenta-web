@@ -155,7 +155,7 @@
   var visor = document.getElementById("visor");
   var visorImg = document.getElementById("visor-img");
   if (visor && visor.showModal) {
-    document.querySelectorAll(".galeria button").forEach(function (b) {
+    document.querySelectorAll(".galeria button, .destacados button").forEach(function (b) {
       b.addEventListener("click", function () {
         var img = b.querySelector("img");
         visorImg.src = img.currentSrc || img.src;
