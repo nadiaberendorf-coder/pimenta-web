@@ -187,9 +187,8 @@ h2.display { font-family: var(--f-display); font-weight: 850; letter-spacing: -0
 .presenta-texto { font-size: clamp(30px, 6.2vw, 64px); font-weight: 400; line-height: .98; letter-spacing: -0.045em; max-width: 22ch; }
 .presenta-acciones { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
 .specs { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--tinta); }
-.specs div { padding: 12px 0 18px; border-bottom: var(--hair); }
-.specs div:nth-child(odd) { padding-right: 12px; border-right: var(--hair); }
-.specs div:nth-child(even) { padding-left: 12px; }
+.specs div { padding: 14px 16px 20px; border-bottom: var(--hair); }
+.specs div:nth-child(odd) { border-right: var(--hair); }
 .specs dd { font-size: 3.4rem; margin-top: 10px; }
 
 /* ---------- Frase repetida en movimiento ---------- */
@@ -412,8 +411,7 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
   .presenta-texto { grid-column: 3 / 12; }
   .presenta-acciones { grid-column: 3 / 12; }
   .specs { grid-column: 1 / -1; grid-template-columns: repeat(4, 1fr); margin-top: 40px; }
-  .specs div, .specs div:nth-child(odd), .specs div:nth-child(even) { padding: 12px 16px 20px 0; border-right: var(--hair); padding-left: 0; }
-  .specs div + div { padding-left: 16px; }
+  .specs div, .specs div:nth-child(odd) { padding: 18px 28px 26px; border-right: var(--hair); }
   .specs div:last-child { border-right: 0; }
   .specs dd { font-size: 4.4rem; }
 
