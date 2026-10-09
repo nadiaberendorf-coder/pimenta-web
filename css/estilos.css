@@ -234,7 +234,21 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 
 .plano-bloque { display: grid; gap: 48px; margin-top: var(--seccion); }
 .plano { background: var(--niebla); padding: 28px; }
-.plano img { width: 100%; height: auto; mix-blend-mode: multiply; opacity: .9; }
+.plano svg { width: 100%; height: auto; display: block; font-family: var(--f-mono); }
+.p-muros path { fill: var(--tinta); stroke: var(--tinta); stroke-width: .6; }
+.p-lineas path { fill: none; stroke: var(--gris); stroke-width: .7; }
+.p-balcones path, .p-escalera path { fill: none; stroke: var(--gris); stroke-width: .7; }
+.p-ventanas path { fill: none; stroke: var(--azul); stroke-width: 1.4; }
+.p-amb rect, .p-amb polygon { fill: rgba(226, 222, 214, 0); transition: fill var(--t) var(--ease); }
+.p-amb:hover rect, .p-amb:hover polygon { fill: var(--arena); }
+.p-amb .p-infinito { fill: var(--tinta); }
+.p-nombre { font-size: 11px; font-weight: 500; letter-spacing: .08em; fill: var(--tinta); }
+.p-grande { font-size: 16px; letter-spacing: .06em; }
+.p-medida { font-size: 9.5px; letter-spacing: .08em; fill: var(--gris); transition: fill var(--t) var(--ease); }
+.p-amb:hover .p-medida { fill: var(--azul); }
+.p-balcon .p-medida { font-size: 8.5px; }
+.p-leyenda line { stroke: var(--azul); stroke-width: 1.4; }
+.p-leyenda text { font-size: 9.5px; letter-spacing: .08em; fill: var(--gris); }
 .plano figcaption { margin-top: 18px; }
 .lista { list-style: none; padding: 0; counter-reset: n; }
 .lista li { counter-increment: n; display: grid; grid-template-columns: 2.6rem 1fr; padding: 12px 0; border-bottom: var(--hair); font-size: 15px; transition: color var(--t) var(--ease); }
@@ -597,11 +611,15 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 
 /* ---------- Marcas que produjeron en PIMENTA ---------- */
 .marcas { display: grid; gap: 14px; padding: 14px 0 22px; border-top: var(--hair); margin-bottom: 40px; }
-.marcas-lista { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 32px; }
-.marcas-lista li { font-family: var(--f-sans); font-weight: 500; font-size: clamp(18px, 2.4vw, 26px); letter-spacing: -0.035em; line-height: 1.1; }
+.marcas-lista { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); border-top: var(--hair); border-left: var(--hair); }
+.marcas-lista li { display: grid; place-items: center; text-align: center; min-height: 64px; padding: 12px 10px; border-right: var(--hair); border-bottom: var(--hair); font-family: var(--f-sans); font-weight: 500; font-size: 15px; letter-spacing: -0.02em; line-height: 1.15; transition: background-color var(--t) var(--ease); }
+.marcas-lista li:hover { background: var(--hueso); }
+.marcas-lista img { max-height: 36px; width: auto; max-width: 80%; filter: grayscale(1); opacity: .85; transition: filter var(--t) var(--ease), opacity var(--t) var(--ease); }
+.marcas-lista li:hover img { filter: none; opacity: 1; }
 .marcas .indice + .marcas-lista + .indice { margin-top: 10px; }
 @media (min-width: 760px) {
-  .marcas { grid-template-columns: 2fr 10fr; column-gap: var(--gutter); row-gap: 18px; align-items: baseline; margin-bottom: 56px; }
+  .marcas { grid-template-columns: 2fr 10fr; column-gap: var(--gutter); row-gap: 24px; align-items: start; margin-bottom: 56px; }
+  .marcas-lista { grid-template-columns: repeat(5, 1fr); }
   .marcas .indice + .marcas-lista + .indice { margin-top: 0; }
 }
 
@@ -611,8 +629,8 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 :is(a, button):hover .fl-ne { transform: translate(4px, -4px); }
 :is(a, button):hover .fl-n { transform: translateY(-4px); }
 .galeria figure:hover img, .ficha .foto:hover img { transform: scale(1.04); filter: saturate(1) contrast(.97) brightness(1); }
-.marcas-lista li::after, .luz-hora::after { content: "°"; color: var(--azul); opacity: 0; margin-left: .06em; font-family: var(--f-sans); font-weight: 400; transition: opacity .6s var(--ease); }
-.marcas-lista li:hover::after, .luz-grid > div:hover .luz-hora::after { opacity: 1; }
+.luz-hora::after { content: "°"; color: var(--azul); opacity: 0; margin-left: .06em; font-family: var(--f-sans); font-weight: 400; transition: opacity .6s var(--ease); }
+.luz-grid > div:hover .luz-hora::after { opacity: 1; }
 .specs div:hover dt, .ficha:hover h3 span, .cab:hover h2 em, .menu a:hover sup, .faq summary:hover::after { color: var(--azul); }
 .specs dt, .ficha h3 span, .cab h2 em, .menu sup { transition: color var(--t) var(--ease); }
 .lista li { transition: color var(--t) var(--ease), padding-left .6s var(--ease); }
