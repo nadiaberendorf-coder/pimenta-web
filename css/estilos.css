@@ -450,3 +450,22 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 .google-num { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
 .google-estrellas { font-size: clamp(18px, 2.4vw, 28px); letter-spacing: .12em; color: var(--tinta); }
 .google-mini { color: var(--gris); }
+
+/* ---------- Lo que dicen: frase gigante, cinta y muro ---------- */
+.frase-gigante { font-family: var(--f-sans); font-weight: 500; font-size: clamp(34px, 7.4vw, 104px); letter-spacing: -0.05em; line-height: .95; max-width: 18ch; margin-top: 8px; }
+.frase-de { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-top: 18px; }
+.estrellas { letter-spacing: .1em; color: var(--tinta); }
+.cita-fuente { color: var(--gris); }
+.frases { overflow: hidden; border-top: var(--hair); border-bottom: var(--hair); margin: 48px 0 56px; padding: 12px 0; }
+.frases-pista { display: flex; width: max-content; white-space: nowrap; animation: corre 60s linear infinite; font-family: var(--f-serif); font-style: italic; font-size: clamp(22px, 3.2vw, 34px); color: var(--tinta); }
+.frases-pista span { padding-right: 1.2em; }
+.frases-pista span::after { content: "—"; color: var(--gris); margin-left: 1.2em; font-family: var(--f-sans); font-style: normal; }
+.mas-citas { margin-top: 8px; }
+.mas-citas summary { list-style: none; cursor: pointer; display: inline-block; margin: 24px 0 8px; }
+.mas-citas summary::-webkit-details-marker { display: none; }
+.mas-citas[open] summary { opacity: .5; }
+.citas-mas { margin-top: 8px; }
+@media (min-width: 760px) {
+  .citas .cita:nth-child(2) { margin-top: 0; }
+  .citas .cita:nth-child(2) { grid-column: 9 / 13; margin-top: 120px; }
+}
