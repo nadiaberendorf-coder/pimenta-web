@@ -244,7 +244,7 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 .p-grande { font-size: 18px; letter-spacing: .04em; }
 .p-medida { font-size: 9.5px; letter-spacing: .06em; fill: var(--gris); transition: fill var(--t) var(--ease); }
 .p-balcon .p-medida { font-size: 8.5px; }
-.p-cota line { stroke: var(--gris); stroke-width: .8; }
+.p-cota line, .p-guia line { stroke: var(--gris); stroke-width: .8; }
 .p-cota text { font-size: 9px; letter-spacing: .06em; fill: var(--gris); }
 .p-leyenda line { stroke: var(--azul); stroke-width: 1.4; }
 .p-leyenda text { font-size: 9.5px; letter-spacing: .08em; fill: var(--gris); }
