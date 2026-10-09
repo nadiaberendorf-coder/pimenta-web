@@ -55,6 +55,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="fotos/portada-ventanal.jpg">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -71,7 +72,7 @@
     <a href="#ubicacion">Ubicación</a>
   </nav>
   <div class="barra-der">
-    <a href="#reservar" class="barra-reservar">(Reservar →)</a>
+    <a href="#reservar" data-calendly class="barra-reservar">(Reservar →)</a>
     <button id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu">Menú</button>
   </div>
 </header>
@@ -134,7 +135,7 @@
 
     <p class="hero-bajada">Estudio fotográfico en alquiler en un edificio antiguo de Congreso: 150 m², techos de 5 m, piso de pinotea y ventanales en arco. <span>Todo incluido, una sola tarifa.</span></p>
 
-    <a class="hero-cta" href="#reservar">Reservar un día<span class="fl">→</span></a>
+    <a class="hero-cta" href="#reservar" data-calendly>Reservar un día<span class="fl">→</span></a>
 
     <span class="hero-vertical" aria-hidden="true">Estudio fotográfico en alquiler — Congreso, Buenos Aires</span>
   </div>
@@ -151,7 +152,7 @@
   <p class="indice">(001) — Index</p>
   <p class="presenta-texto">Un estudio de <em>luz natural</em> en Congreso. Una sola tarifa con <em class="nota">todo incluido</em>: el estudio completo, equipos, infinito, mobiliario y asistencia. Llegás y producís.</p>
   <div class="presenta-acciones">
-    <a href="#reservar" class="btn">Reservar →</a>
+    <a href="#reservar" data-calendly class="btn">Reservar →</a>
     <a href="#tour" data-tour class="btn btn-borde">Ver el estudio en 360° ↗</a>
     <a href="#tarifas" class="link">Ver tarifas ↗</a>
     <a href="https://maps.app.goo.gl/WNk3tJEqBnYM6PEH6" data-link="google" class="link google-mini">★ 4,9 en Google</a>
@@ -414,7 +415,7 @@
     <p class="cta-texto">¿Dudas con la tarifa o la fecha? Te respondemos por WhatsApp.</p>
     <div class="acciones">
       <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero consultar por una fecha y la tarifa." class="btn">Hablar con el equipo →</a>
-      <a href="#reservar" class="link">Reservar online ↗</a>
+      <a href="#reservar" data-calendly class="link">Reservar online ↗</a>
     </div>
   </div>
 </section>
@@ -452,7 +453,7 @@
     <p class="cta-texto">Tu próxima producción, acá.</p>
     <div class="acciones">
       <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero reservar el estudio para una producción." class="btn">Hablar con el equipo →</a>
-      <a href="#reservar" class="link">Reservar online ↗</a>
+      <a href="#reservar" data-calendly class="link">Reservar online ↗</a>
     </div>
   </div>
 </section>
@@ -639,8 +640,12 @@
   </ol>
 
   <div id="calendly" class="calendly">
-    <p><span class="completar">[completar link de Calendly]</span></p>
-    <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero consultar disponibilidad para reservar." class="btn">Consultar disponibilidad →</a>
+    <p class="indice">[ Disponibilidad en vivo ]</p>
+    <p class="calendly-texto">Mirá los días y horas libres y reservá en el momento. Se abre acá mismo, sin salir de la web.</p>
+    <div class="acciones">
+      <a href="#reservar" data-calendly="directo" class="btn">Consultar disponibilidad →</a>
+      <a href="#contacto" data-link="whatsapp" data-msg="Hola PIMENTA, quiero consultar disponibilidad para reservar." class="link">Preguntar por WhatsApp ↗</a>
+    </div>
   </div>
 
   <div class="visita">
@@ -795,7 +800,7 @@
     <a href="#contacto" data-link="whatsapp" data-msg="¡Hola PIMENTA! Quiero hacer una consulta." class="btn btn-claro">Escribinos por WhatsApp →</a>
     <a href="#contacto" data-link="instagram" class="btn btn-claro btn-borde">Instagram ↗</a>
     <a href="#contacto" data-link="mail" class="btn btn-claro btn-borde">Mandar un mail ↗</a>
-    <a href="#reservar" class="btn btn-claro btn-borde">Reservar →</a>
+    <a href="#reservar" data-calendly class="btn btn-claro btn-borde">Reservar →</a>
   </div>
 </section>
 
@@ -824,6 +829,7 @@
 </dialog>
 
 <script src="js/datos.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script src="js/main.js"></script>
 </body>
 </html>

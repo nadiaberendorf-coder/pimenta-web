@@ -89,22 +89,15 @@
   var cant = document.querySelector(".google-cant");
   if (cant && d.googleResenas) cant.hidden = false;
 
-  /* --- Calendly --- */
-  var cal = document.getElementById("calendly");
-  if (cal && d.calendly && window.PIMENTA_VISTA_PREVIA) {
-    // en la vista previa de Claude no se pueden mostrar calendarios embebidos
-    cal.innerHTML = '<p>Acá aparece tu calendario de Calendly en la web publicada.</p>' +
-      '<a class="btn" href="' + d.calendly + '" target="_blank" rel="noopener">Abrir Calendly</a>';
-  } else if (cal && d.calendly) {
-    var iframe = document.createElement("iframe");
-    iframe.src = d.calendly + (d.calendly.indexOf("?") > -1 ? "&" : "?") +
-      "hide_gdpr_banner=1&embed_type=Inline&embed_domain=" + location.hostname;
-    iframe.title = "Calendario de reservas de PIMENTA Estudios";
-    iframe.loading = "lazy";
-    cal.innerHTML = "";
-    cal.appendChild(iframe);
-    cal.classList.add("calendly--activo");
-  }
+  /* --- Calendly: el calendario se abre encima de la página, sin salir de la web --- */
+  var abrirCalendly = function (e) {
+    if (!d.calendly) return;
+    var url = d.calendly + (d.calendly.indexOf("?") > -1 ? "&" : "?") + "hide_gdpr_banner=1";
+    if (window.Calendly && window.Calendly.initPopupWidget) { e.preventDefault(); window.Calendly.initPopupWidget({ url: url }); return; }
+    // si el widget no cargó (o estamos en la vista previa), se abre en una pestaña nueva
+    if (window.PIMENTA_VISTA_PREVIA || e.currentTarget.getAttribute("data-calendly") === "directo") { e.preventDefault(); window.open(url, "_blank", "noopener"); }
+  };
+  document.querySelectorAll("[data-calendly]").forEach(function (a) { a.addEventListener("click", abrirCalendly); });
 
   /* --- Tour 360°: se carga recién cuando lo piden, para que la web sea rápida --- */
   var tourBoton = document.getElementById("tour-boton");

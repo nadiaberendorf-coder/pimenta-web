@@ -341,8 +341,8 @@ figcaption, .pie-foto { margin-top: 10px; text-wrap: balance; }
 .pasos h3 { font-family: var(--f-sans); font-size: 22px; font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 8px; }
 .pasos p { color: var(--gris); max-width: 38ch; }
 .calendly { border: var(--hair); padding: 40px 20px; display: grid; gap: 18px; justify-items: center; text-align: center; background: var(--niebla); }
-.calendly--activo { padding: 0; display: block; }
-.calendly iframe { width: 100%; height: 720px; border: 0; display: block; }
+.calendly-texto { font-size: clamp(20px, 3vw, 26px); letter-spacing: -0.03em; line-height: 1.15; max-width: 30ch; }
+.calendly .acciones { justify-content: center; }
 .visita { display: grid; gap: 16px; margin-top: 24px; padding: 24px 0 0; border-top: var(--hair); }
 .visita-texto { font-size: 22px; letter-spacing: -0.03em; line-height: 1.15; max-width: 30ch; }
 
